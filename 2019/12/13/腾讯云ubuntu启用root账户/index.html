@@ -79,15 +79,15 @@
 
 
 
-<meta name="description" content="腾讯云ubuntu启用root账户腾讯云ubuntu的默认账户名为ubuntu 启用root步骤  sudo passwd root  sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config  esc，在命令行模式下，输入 &#x2F;PermitRootLogin，搜索定位到这一行  i，修改后面的 prohibit-password 为 yes   PermitRootLogin 参数指定 root">
+<meta name="description" content="腾讯云ubuntu启用root账户腾讯云ubuntu的默认账户名为ubuntu 启用root步骤  sudo passwd root  sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config  esc，在命令行模式下，输入 &#x2F;PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个  i，删除#，修改后面的 prohibit-password 为 yes   PermitRoot">
 <meta name="keywords" content="ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="腾讯云ubuntu启用root账户">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;13&#x2F;%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7&#x2F;index.html">
 <meta property="og:site_name" content="Ness001">
-<meta property="og:description" content="腾讯云ubuntu启用root账户腾讯云ubuntu的默认账户名为ubuntu 启用root步骤  sudo passwd root  sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config  esc，在命令行模式下，输入 &#x2F;PermitRootLogin，搜索定位到这一行  i，修改后面的 prohibit-password 为 yes   PermitRootLogin 参数指定 root">
+<meta property="og:description" content="腾讯云ubuntu启用root账户腾讯云ubuntu的默认账户名为ubuntu 启用root步骤  sudo passwd root  sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config  esc，在命令行模式下，输入 &#x2F;PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个  i，删除#，修改后面的 prohibit-password 为 yes   PermitRoot">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-13T05:32:55.178Z">
+<meta property="og:updated_time" content="2019-12-13T06:51:02.025Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -305,9 +305,9 @@
 </li>
 <li><p>sudo vi /etc/ssh/sshd_config</p>
 <ul>
-<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行</p>
+<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p>
 </li>
-<li><p>i，修改后面的 prohibit-password 为 yes</p>
+<li><p>i，删除#，修改后面的 prohibit-password 为 yes</p>
 </li>
 <li><blockquote>
 <h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
@@ -318,7 +318,7 @@
 </li>
 </ul>
 </li>
-<li><p>sudo service ssh restart</p>
+<li><p>sudo service ssh restart （！！！）</p>
 </li>
 <li><p>切换到root </p>
 <ul>
@@ -356,8 +356,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/13/README/" rel="next" title="README">
-                <i class="fa fa-chevron-left"></i> README
+              <a href="/2019/12/07/apple-lines/" rel="next" title="apple lines">
+                <i class="fa fa-chevron-left"></i> apple lines
               </a>
             
           </div>
@@ -365,6 +365,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/13/pip-require/" rel="prev" title="pip require">
+                pip require <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -441,7 +445,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -454,7 +458,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>

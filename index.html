@@ -228,6 +228,261 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ness001">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/" itemprop="url">label encoder和ordinal encoder的区别</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-15T12:11:20+08:00">
+                2019-12-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
+<h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p>
+<p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/pip-require/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ness001">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/12/13/pip-require/" itemprop="url">pip require</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T13:44:45+08:00">
+                2019-12-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
+<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
+<li>for packages used in you project<ul>
+<li><code>pip3 install pipreqs</code></li>
+<li><code>pipreqs</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
+<hr>
+<blockquote>
+<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -306,156 +561,9 @@
 </li>
 <li><p>sudo vi /etc/ssh/sshd_config</p>
 <ul>
-<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行</p>
+<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p>
 </li>
-<li><p>i，修改后面的 prohibit-password 为 yes</p>
-</li>
-<li><blockquote>
-<h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
-<p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p>
-<p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p>
-<p>如果这个选项设置为“no”，root 不允许登录。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>sudo service ssh restart</p>
-</li>
-<li><p>切换到root </p>
-<ul>
-<li>su root</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/13/README/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liang Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ness001">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/12/13/README/" itemprop="url">README</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-13T13:23:40+08:00">
-                2019-12-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
-<p>启用root步骤</p>
-<ul>
-<li><p>sudo passwd root</p>
-</li>
-<li><p>sudo vi /etc/ssh/sshd_config</p>
-<ul>
-<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行</p>
-</li>
-<li><p>i，修改后面的 prohibit-password 为 yes</p>
+<li><p>i，删除#，修改后面的 prohibit-password 为 yes</p>
 </li>
 <li><blockquote>
 <h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
@@ -466,7 +574,7 @@
 </li>
 </ul>
 </li>
-<li><p>sudo service ssh restart</p>
+<li><p>sudo service ssh restart （！！！）</p>
 </li>
 <li><p>切换到root </p>
 <ul>
@@ -841,7 +949,7 @@
               
                 <a href="/archives/%20%7C%7C%20archive">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -854,7 +962,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
