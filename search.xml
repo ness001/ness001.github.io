@@ -22,6 +22,63 @@
 ]]></content>
   </entry>
   <entry>
+    <title>copy current code line shortcut in Xcode</title>
+    <url>/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
+    <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
+<p>macos mojave</p>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
+<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
+<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>restart xcode</li>
+<li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
+<li>add your own shortcut</li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>generate requirement.txt for your python project生成</title>
+    <url>/2019/12/13/generate-requirement/</url>
+    <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
+<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
+<li>for packages used in you project<ul>
+<li><code>pip3 install pipreqs</code></li>
+<li><code>pipreqs</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
+<h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote>
+<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
+</blockquote>
+<p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>本博客hexo设定</title>
+    <url>/2020/05/21/hexo/</url>
+    <content><![CDATA[<h2 id="我的hexo配置"><a href="#我的hexo配置" class="headerlink" title="我的hexo配置"></a>我的hexo配置</h2><ul>
+<li>Next主题</li>
+<li>爱心鼠标</li>
+<li>动态背景</li>
+</ul>
+<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
+<li><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Apple Lines 苹果广告词摘录</title>
     <url>/2019/12/07/apple-ad-lines/</url>
     <content><![CDATA[<p>愿苹果永不落幕。</p>
@@ -75,73 +132,6 @@
       </tags>
   </entry>
   <entry>
-    <title>generate requirement.txt for your python project生成</title>
-    <url>/2019/12/13/generate-requirement/</url>
-    <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
-<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
-<li>for packages used in you project<ul>
-<li><code>pip3 install pipreqs</code></li>
-<li><code>pipreqs</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
-<h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote>
-<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
-</blockquote>
-<p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>本博客hexo设定</title>
-    <url>/2020/05/21/hexo/</url>
-    <content><![CDATA[<h2 id="我的hexo配置"><a href="#我的hexo配置" class="headerlink" title="我的hexo配置"></a>我的hexo配置</h2><ul>
-<li>Next主题</li>
-<li>爱心鼠标</li>
-<li>动态背景</li>
-</ul>
-<h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul>
-<li><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>copy current code line shortcut in Xcode</title>
-    <url>/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
-    <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
-<p>macos mojave</p>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
-<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
-<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure>
-
-<ul>
-<li>restart xcode</li>
-<li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
-<li>add your own shortcut</li>
-</ul>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>remove an executable file to \usr\bin</title>
-    <url>/2020/03/30/macos-user-bin/</url>
-    <content><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p>
-<p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>
-]]></content>
-      <tags>
-        <tag>MacOS</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>label encoder和ordinal encoder的区别</title>
     <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
     <content><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
@@ -154,39 +144,13 @@
       </tags>
   </entry>
   <entry>
-    <title>腾讯云ubuntu启用root账户</title>
-    <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
-    <content><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
-<p>启用root步骤</p>
-<ul>
-<li><p>sudo passwd root</p>
-</li>
-<li><p>sudo vi /etc/ssh/sshd_config</p>
-<ul>
-<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p>
-</li>
-<li><p>i，删除#，修改后面的 prohibit-password 为 yes</p>
-</li>
-<li><blockquote>
-<h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
-<p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p>
-<p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p>
-<p>如果这个选项设置为“no”，root 不允许登录。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>sudo service ssh restart （！！！）</p>
-</li>
-<li><p>切换到root </p>
-<ul>
-<li>su root</li>
-</ul>
-</li>
-</ul>
+    <title>remove an executable file to \usr\bin</title>
+    <url>/2020/03/30/macos-user-bin/</url>
+    <content><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p>
+<p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>
 ]]></content>
       <tags>
-        <tag>ubuntu</tag>
+        <tag>MacOS</tag>
       </tags>
   </entry>
   <entry>
@@ -299,6 +263,42 @@
 ]]></content>
       <tags>
         <tag>switch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云ubuntu启用root账户</title>
+    <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
+    <content><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
+<p>启用root步骤</p>
+<ul>
+<li><p>sudo passwd root</p>
+</li>
+<li><p>sudo vi /etc/ssh/sshd_config</p>
+<ul>
+<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p>
+</li>
+<li><p>i，删除#，修改后面的 prohibit-password 为 yes</p>
+</li>
+<li><blockquote>
+<h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
+<p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p>
+<p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p>
+<p>如果这个选项设置为“no”，root 不允许登录。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>sudo service ssh restart （！！！）</p>
+</li>
+<li><p>切换到root </p>
+<ul>
+<li>su root</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>ubuntu</tag>
       </tags>
   </entry>
 </search>
