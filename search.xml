@@ -1,185 +1,294 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>本博客hexo设定</title>
-      <link href="/2020/05/21/hexo/"/>
-      <url>/2020/05/21/hexo/</url>
-      
-        <content type="html"><![CDATA[<h2 id="我的hexo配置"><a href="#我的hexo配置" class="headerlink" title="我的hexo配置"></a>我的hexo配置</h2><ul><li>Next主题</li><li>爱心鼠标</li><li>动态背景</li></ul><h2 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h2><ul><li><code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code></li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo NexT主题添加点击爱心效果</title>
-      <link href="/2020/05/21/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/"/>
-      <url>/2020/05/21/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Hexo-NexT主题添加点击爱心效果"><a href="#Hexo-NexT主题添加点击爱心效果" class="headerlink" title="Hexo NexT主题添加点击爱心效果"></a>Hexo NexT主题添加点击爱心效果</h2><h3 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h3><p>在<code>/themes/next/source/js/src</code>下新建文件<code>clicklove.js</code>，接着把该<a href="http://7u2ss1.com1.z0.glb.clouddn.com/love.js" target="_blank" rel="noopener">链接</a>下的代码拷贝粘贴到<code>clicklove.js</code>文件中。<br>代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span></pre></td></tr></table></figure><h3 id="修改-layout-swig"><a href="#修改-layout-swig" class="headerlink" title="修改_layout.swig"></a>修改_layout.swig</h3><p>在<code>\themes\next\layout\_layout.swig</code>文件末尾添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr></table></figure><h2 id="添加动态背景"><a href="#添加动态背景" class="headerlink" title="添加动态背景"></a>添加动态背景</h2><h3 id="layout-swig"><a href="#layout-swig" class="headerlink" title="_layout.swig"></a>_layout.swig</h3><p>找到<code>themes\next\layout\_layout.swig</code>文件，添加内容：<br>在``里添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;bg_content&quot;&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  &lt;canvas id&#x3D;&quot;canvas&quot;&gt;&lt;&#x2F;canvas&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">&lt;&#x2F;div&gt;</span></pre></td></tr></table></figure><p>仍是该文件，在末尾添加：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;dynamic_bg.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr></table></figure><h3 id="dynamic-bg-js"><a href="#dynamic-bg-js" class="headerlink" title="dynamic_bg.js"></a>dynamic_bg.js</h3><p>在<code>themes\next\source\js\src</code>中新建文件<code>dynamic_bg.js</code>，代码链接中可见：<a href="https://github.com/asdfv1929/asdfv1929.github.io/blob/master/js/src/dynamic_bg.js" target="_blank" rel="noopener">dynamic_bg.js</a></p><h3 id="custom-styl"><a href="#custom-styl" class="headerlink" title="custom.styl"></a>custom.styl</h3><p>在<code>themes\next\source\css\_custom\custom.styl</code>文件末尾添加内容：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">.bg_content &#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  position: fixed;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">  top: 0;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">  z-index: -1;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">  width: 100%;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  height: 100%;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure><h2 id="tag-cloud"><a href="#tag-cloud" class="headerlink" title="tag cloud"></a>tag cloud</h2><p>、、、</p><h2 id="增加tag页面"><a href="#增加tag页面" class="headerlink" title="增加tag页面"></a>增加tag页面</h2><p>hexo new post tags</p><p>编辑为：</p><blockquote><p>title: tags<br>date: 2020-05-21 18:35:04<br>layout: “tags”<br>type: tags</p></blockquote>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用pyinstaller将pyqt5打包为MacOS App</title>
-      <link href="/2020/05/20/py-bundle/"/>
-      <url>/2020/05/20/py-bundle/</url>
-      
-        <content type="html"><![CDATA[<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html" target="_blank" rel="noopener">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p><h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> yourprogram</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">sudo pyi-makespec --onefile --windowed yourscript.py</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="comment">#如果你修改了py文件，也不用再运行一遍👆的代码</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">sudo pyinstaller --clean --noconfirm yourscript.spec</span></pre></td></tr></table></figure><p>出现no permission问题，用sudo就对了。</p><p>我的环境：</p><blockquote><p>163 INFO: PyInstaller: 3.6<br>164 INFO: Python: 3.7.4<br>187 INFO: Platform: Darwin-19.2.0-x86_64-i386-64bit<br>219 INFO: UPX is available.</p></blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>基本格式：</p><p><code>pyinstaller</code> options.. <code>myscript.py</code></p><p><code>pyinstaller --windowed --onefile --clean --noconfirm testqt.py</code></p><p>这样生成的文件夹dist中是pkg文件，往往打开就出错，不知为何</p><p>通过上面的代码，根目录下还会生成一个spec文件，spec文件是告诉pyinstaller如何打包你的程序的配置文件，对spec文件做相同的操作，就可以获得app文件。</p><p><code>pyinstaller</code> options.. <code>myscript.spec</code></p><p><code>pyinstaller --clean --noconfirm testqt.spec</code></p><p>怎么直接获得spec文件呢？</p><p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code></p><p>spec文件打开后应该能看到类似这样的字样</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">app &#x3D; BUNDLE(exe,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">         name&#x3D;&#39;myscript.app&#39;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">         icon&#x3D;None,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">         bundle_identifier&#x3D;None)</span></pre></td></tr></table></figure><h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><p>注意短横-后是缩写，–后是全称。</p><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html" target="_blank" rel="noopener">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p><h3 id="对py的pyinstaller-和pyi-makespec命令（只列出常用）"><a href="#对py的pyinstaller-和pyi-makespec命令（只列出常用）" class="headerlink" title="对py的pyinstaller 和pyi-makespec命令（只列出常用）"></a>对py的pyinstaller 和pyi-makespec命令（只列出常用）</h3><ul><li>–clean<ul><li>Clean PyInstaller cache and remove temporary files before building.</li></ul></li><li>–noconfirm -y<ul><li>Replace output directory (default: SPECPATH/dist/SPECNAME) without asking for confirmation</li></ul></li><li>–windowed -w<ul><li>Windows and Mac OS X: do not provide a console window for standard i/o. On Mac OS X this also triggers building an OS X .app bundle. On Windows this option will be set if the first script is a ‘.pyw’ file. This option is ignored in *NIX systems.</li></ul></li><li>–onefile -F<ul><li>Create a one-file bundled executable.</li></ul></li><li>onedir -D<ul><li>Create a one-folder bundle containing an executable (default)</li></ul></li><li>–osx-bundle-identifier BUNDLE_IDENTIFIER<ul><li>Mac OS X .app bundle identifier is used as the default unique program name for code signing purposes. The usual form is a hierarchical name in reverse DNS notation. For example: com.mycompany.department.appname (default: first script’s basename)</li></ul></li></ul><hr><p>官方说对于对py的pyinstaller选项库和pyi-makespec的选项库是一样的。</p><blockquote><p>You create a spec file using this command:</p><blockquote><p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code> [<em>other scripts</em> …]</p></blockquote><p>The <em>options</em> are the same options documented above for the <code>pyinstaller</code> command. This command creates the <code>*name*.spec</code> file but does not go on to build the executable.</p></blockquote><p>然而其实不是的，如果你加入 –clean的选项，则会出现<code>pyi-makespec: error: unrecognized arguments: --clean</code>，经过测试–noconfirm也是不能用的。</p><h3 id="对spec的pyinstaller"><a href="#对spec的pyinstaller" class="headerlink" title="对spec的pyinstaller"></a>对spec的pyinstaller</h3><p>对于spec文件操作，只有这些命令是起作用的。</p><ul><li><code>--upx-dir=</code></li><li><code>--distpath=</code></li><li><code>--workpath=</code></li><li><code>--noconfirm</code></li><li><code>--ascii</code></li><li><code>--clean</code></li></ul><h2 id="高分辨率app"><a href="#高分辨率app" class="headerlink" title="高分辨率app"></a>高分辨率app</h2><p>当你好不容易打包好一个app后问题又来了，你发现你的app的ui异常模糊，分辨率很低。你只需要在spec文件中加上info_plist就能解决问题。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">app &#x3D; BUNDLE(exe,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">     name&#x3D;&#39;myscript.app&#39;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">     icon&#x3D;None,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">     bundle_identifier&#x3D;None</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">     info_plist&#x3D;&#123;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">        &#39;NSHighResolutionCapable&#39;: &#39;True&#39;  #&lt;------这一句</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">     )</span></pre></td></tr></table></figure><h2 id="减小app体积"><a href="#减小app体积" class="headerlink" title="减小app体积"></a>减小app体积</h2><p>写python程序的过程中尽量不要使用import，而是用from…import…来减少调用。</p><p>第一步：安装upx</p><ul><li>使用<code>brew install upx</code></li></ul><p>第二部：使用pipenv的干净环境进行打包操作。</p><ul><li>以下是一个本人的通用流程。依次在bash中运行。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip install pipenv</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">pip install pipreqs</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">pipreqs <span class="comment">#generate clean requirements.txt</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">pipenv install</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">pipenv shell</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">pip install -r requirements.txt</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">pyi-makespec --onefile --windowed myscript.py</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">pyinstaller --noconfirm --clean myscript.spec</span></pre></td></tr></table></figure><h2 id="不知道问题出在哪里怎么办？"><a href="#不知道问题出在哪里怎么办？" class="headerlink" title="不知道问题出在哪里怎么办？"></a>不知道问题出在哪里怎么办？</h2><p>运行dist文件夹下的同名unix进程，该进程会在terminal中打开，如果有错误会在terminal中表现出来。</p><p>比如我的app一开始只要双击就会闪退，于是我使用这个方法，控制台中出现了如下错误。经过搜索了解到是setuptools最新的几个版本和pyqt5有点冲突。使用<code>pip install setuptools==44.0.0</code>安装44版本后就没问题了。</p><blockquote><p>File “site-packages/pkg_resources/<strong>init</strong>.py”, line 86, in <module></p><p>ModuleNotFoundError: No module named ‘pkg_resources.py2_warn’</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>remove an executable file to \usr\bin</title>
-      <link href="/2020/03/30/macos-user-bin/"/>
-      <url>/2020/03/30/macos-user-bin/</url>
-      
-        <content type="html"><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p><p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> MacOS </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>switch提升网速的dns测试</title>
-      <link href="/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/"/>
-      <url>/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/</url>
-      
-        <content type="html"><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p><p>腾达千兆5g路由器</p><h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p><p>218.102.23.228</p><p>203.80.96.10</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> switch </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>label encoder和ordinal encoder的区别</title>
-      <link href="/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
-      <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-      
-        <content type="html"><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p><h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p><p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> sklearn </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>generate requirement.txt for your python project生成</title>
-      <link href="/2019/12/13/generate-requirement/"/>
-      <url>/2019/12/13/generate-requirement/</url>
-      
-        <content type="html"><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul><li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li><li>for packages used in you project<ul><li><code>pip3 install pipreqs</code></li><li><code>pipreqs</code></li></ul></li></ul><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p><h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote><p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p></blockquote><p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>腾讯云ubuntu启用root账户</title>
-      <link href="/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/"/>
-      <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
-      
-        <content type="html"><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p><p>启用root步骤</p><ul><li><p>sudo passwd root</p></li><li><p>sudo vi /etc/ssh/sshd_config</p><ul><li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p></li><li><p>i，删除#，修改后面的 prohibit-password 为 yes</p></li><li><blockquote><h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p><p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p><p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p><p>如果这个选项设置为“no”，root 不允许登录。</p></blockquote></li></ul></li><li><p>sudo service ssh restart （！！！）</p></li><li><p>切换到root </p><ul><li>su root</li></ul></li></ul>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> ubuntu </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Apple Lines 苹果广告词摘录</title>
-      <link href="/2019/12/07/apple-ad-lines/"/>
-      <url>/2019/12/07/apple-ad-lines/</url>
-      
-        <content type="html"><![CDATA[<p>愿苹果永不落幕。</p><p>Long Live with Apple.</p><h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p><blockquote><p>Make someone’s holiday.</p></blockquote><p>Best of 2019</p><blockquote><p>你的心头所爱，我们甄选推荐。</p><p>Loved by you. Awarded bu us.</p></blockquote><h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Apple-Watch"><a href="#Apple-Watch" class="headerlink" title="Apple Watch"></a>Apple Watch</h3><p>watch series5</p><blockquote><p>全天候视网膜显示屏，全新登场。</p><p>这块表，好不一样。</p></blockquote><h3 id="AirPods"><a href="#AirPods" class="headerlink" title="AirPods"></a>AirPods</h3><p>AirPods Pro</p><blockquote><p>妙得不同凡响。</p><p>Magic like you’ve never heard.</p></blockquote><h3 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h3><p>iPhone 11 Pro</p><blockquote><p>Pro cameras. Pro display. Pro performance.</p></blockquote><p>iPhone 11</p><blockquote><p>Just the right amount of everything.</p></blockquote><p>iPhone SE 2</p><blockquote><p>Lots to Love, Less to Spend（我觉得用have会更好）</p><p>称心称手，超值入手。</p><hr><p>iPhone SE packs our most powerful chip into our most popular size at our most affordable price. It’s just what you’ve been waiting for.</p><p>Survives splashes,<br>sloshes, sprinkles, sprays,<br>splatters, and spills.</p><p>Built for iOS 13. And beyond.</p></blockquote><h3 id="-tv"><a href="#-tv" class="headerlink" title=" tv+"></a> tv+</h3><blockquote><p>Bring the big screen to your screen.</p></blockquote><h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>macOS Catalina</p><blockquote><p>Mac的本领，突飞猛进。</p></blockquote>]]></content>
-      
-      
-      
-        <tags>
-            
-            <tag> apple </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>copy current code line shortcut in Xcode</title>
-      <link href="/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/"/>
-      <url>/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p><p>macos mojave</p><h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul><li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li><li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li></ul><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure><ul><li>restart xcode</li><li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul><li>add your own shortcut</li></ul></li></ul>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-  
-  
+<search>
+  <entry>
+    <title>Hexo NexT主题添加点击爱心效果</title>
+    <url>/2020/05/21/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/</url>
+    <content><![CDATA[<h2 id="Hexo-NexT主题添加点击爱心效果"><a href="#Hexo-NexT主题添加点击爱心效果" class="headerlink" title="Hexo NexT主题添加点击爱心效果"></a>Hexo NexT主题添加点击爱心效果</h2><h3 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h3><p>在<code>/themes/next/source/js/src</code>下新建文件<code>clicklove.js</code>，接着把该<a href="http://7u2ss1.com1.z0.glb.clouddn.com/love.js" target="_blank" rel="noopener">链接</a>下的代码拷贝粘贴到<code>clicklove.js</code>文件中。<br>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#39;&#39;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e&#x3D;0;e&lt;d.length;e++)d[e].alpha&lt;&#x3D;0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+&#x3D;.004,d[e].alpha-&#x3D;.013,d[e].el.style.cssText&#x3D;&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t&#x3D;&quot;function&quot;&#x3D;&#x3D;typeof e.onclick&amp;&amp;e.onclick;e.onclick&#x3D;function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a&#x3D;t.createElement(&quot;div&quot;);a.className&#x3D;&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a&#x3D;t.createElement(&quot;style&quot;);a.type&#x3D;&quot;text&#x2F;css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText&#x3D;e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d&#x3D;[];e.requestAnimationFrame&#x3D;function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3&#x2F;60)&#125;&#125;(),n()&#125;(window,document);</span></pre></td></tr></table></figure>
+
+<h3 id="修改-layout-swig"><a href="#修改-layout-swig" class="headerlink" title="修改_layout.swig"></a>修改_layout.swig</h3><p>在<code>\themes\next\layout\_layout.swig</code>文件末尾添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;clicklove.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr></table></figure>
+
+<h2 id="添加动态背景"><a href="#添加动态背景" class="headerlink" title="添加动态背景"></a>添加动态背景</h2><h3 id="layout-swig"><a href="#layout-swig" class="headerlink" title="_layout.swig"></a>_layout.swig</h3><p>找到<code>themes\next\layout\_layout.swig</code>文件，添加内容：<br>在``里添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;div class&#x3D;&quot;bg_content&quot;&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  &lt;canvas id&#x3D;&quot;canvas&quot;&gt;&lt;&#x2F;canvas&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&lt;&#x2F;div&gt;</span></pre></td></tr></table></figure>
+
+<p>仍是该文件，在末尾添加：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;&#x2F;js&#x2F;src&#x2F;dynamic_bg.js&quot;&gt;&lt;&#x2F;script&gt;</span></pre></td></tr></table></figure>
+
+<h3 id="dynamic-bg-js"><a href="#dynamic-bg-js" class="headerlink" title="dynamic_bg.js"></a>dynamic_bg.js</h3><p>在<code>themes\next\source\js\src</code>中新建文件<code>dynamic_bg.js</code>，代码链接中可见：<a href="https://github.com/asdfv1929/asdfv1929.github.io/blob/master/js/src/dynamic_bg.js" target="_blank" rel="noopener">dynamic_bg.js</a></p>
+<h3 id="custom-styl"><a href="#custom-styl" class="headerlink" title="custom.styl"></a>custom.styl</h3><p>在<code>themes\next\source\css\_custom\custom.styl</code>文件末尾添加内容：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">.bg_content &#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  position: fixed;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  top: 0;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  z-index: -1;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  width: 100%;</span></pre></td></tr><tr><td class="code"><pre><span class="line">  height: 100%;</span></pre></td></tr><tr><td class="code"><pre><span class="line">&#125;</span></pre></td></tr></table></figure>
+
+<h2 id="tag-cloud"><a href="#tag-cloud" class="headerlink" title="tag cloud"></a>tag cloud</h2><p>、、、</p>
+<h2 id="增加tag页面"><a href="#增加tag页面" class="headerlink" title="增加tag页面"></a>增加tag页面</h2><p>hexo new post tags</p>
+<p>编辑为：</p>
+<blockquote>
+<p>title: tags<br>date: 2020-05-21 18:35:04<br>layout: “tags”<br>type: tags</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>Apple Lines 苹果广告词摘录</title>
+    <url>/2019/12/07/apple-ad-lines/</url>
+    <content><![CDATA[<p>愿苹果永不落幕。</p>
+<p>Long Live with Apple.</p>
+<h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p>
+<blockquote>
+<p>Make someone’s holiday.</p>
+</blockquote>
+<p>Best of 2019</p>
+<blockquote>
+<p>你的心头所爱，我们甄选推荐。</p>
+<p>Loved by you. Awarded bu us.</p>
+</blockquote>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Apple-Watch"><a href="#Apple-Watch" class="headerlink" title="Apple Watch"></a>Apple Watch</h3><p>watch series5</p>
+<blockquote>
+<p>全天候视网膜显示屏，全新登场。</p>
+<p>这块表，好不一样。</p>
+</blockquote>
+<h3 id="AirPods"><a href="#AirPods" class="headerlink" title="AirPods"></a>AirPods</h3><p>AirPods Pro</p>
+<blockquote>
+<p>妙得不同凡响。</p>
+<p>Magic like you’ve never heard.</p>
+</blockquote>
+<h3 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h3><p>iPhone 11 Pro</p>
+<blockquote>
+<p>Pro cameras. Pro display. Pro performance.</p>
+</blockquote>
+<p>iPhone 11</p>
+<blockquote>
+<p>Just the right amount of everything.</p>
+</blockquote>
+<p>iPhone SE 2</p>
+<blockquote>
+<p>Lots to Love, Less to Spend（我觉得用have会更好）</p>
+<p>称心称手，超值入手。</p>
+<hr>
+<p>iPhone SE packs our most powerful chip into our most popular size at our most affordable price. It’s just what you’ve been waiting for.</p>
+<p>Survives splashes,<br>sloshes, sprinkles, sprays,<br>splatters, and spills.</p>
+<p>Built for iOS 13. And beyond.</p>
+</blockquote>
+<h3 id="-tv"><a href="#-tv" class="headerlink" title=" tv+"></a> tv+</h3><blockquote>
+<p>Bring the big screen to your screen.</p>
+</blockquote>
+<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>macOS Catalina</p>
+<blockquote>
+<p>Mac的本领，突飞猛进。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>apple</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>generate requirement.txt for your python project生成</title>
+    <url>/2019/12/13/generate-requirement/</url>
+    <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
+<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
+<li>for packages used in you project<ul>
+<li><code>pip3 install pipreqs</code></li>
+<li><code>pipreqs</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
+<h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote>
+<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
+</blockquote>
+<p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>label encoder和ordinal encoder的区别</title>
+    <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
+<h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p>
+<p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>
+]]></content>
+      <tags>
+        <tag>sklearn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>remove an executable file to \usr\bin</title>
+    <url>/2020/03/30/macos-user-bin/</url>
+    <content><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p>
+<p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>
+]]></content>
+      <tags>
+        <tag>MacOS</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>switch提升网速的dns测试</title>
+    <url>/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/</url>
+    <content><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p>
+<p>腾达千兆5g路由器</p>
+<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p>
+<p>218.102.23.228</p>
+<p>203.80.96.10</p>
+]]></content>
+      <tags>
+        <tag>switch</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>腾讯云ubuntu启用root账户</title>
+    <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
+    <content><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
+<p>启用root步骤</p>
+<ul>
+<li><p>sudo passwd root</p>
+</li>
+<li><p>sudo vi /etc/ssh/sshd_config</p>
+<ul>
+<li><p>esc，在命令行模式下，输入 /PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p>
+</li>
+<li><p>i，删除#，修改后面的 prohibit-password 为 yes</p>
+</li>
+<li><blockquote>
+<h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1" target="_blank" rel="noopener">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
+<p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p>
+<p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p>
+<p>如果这个选项设置为“no”，root 不允许登录。</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li><p>sudo service ssh restart （！！！）</p>
+</li>
+<li><p>切换到root </p>
+<ul>
+<li>su root</li>
+</ul>
+</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>ubuntu</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用pyinstaller将pyqt5打包为MacOS App</title>
+    <url>/2020/05/20/py-bundle/</url>
+    <content><![CDATA[<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html" target="_blank" rel="noopener">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p>
+<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> yourprogram</span></pre></td></tr><tr><td class="code"><pre><span class="line">sudo pyi-makespec --onefile --windowed yourscript.py</span></pre></td></tr><tr><td class="code"><pre><span class="line"><span class="comment">#如果你修改了py文件，也不用再运行一遍👆的代码</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">sudo pyinstaller --clean --noconfirm yourscript.spec</span></pre></td></tr></table></figure>
+
+<p>出现no permission问题，用sudo就对了。</p>
+<p>我的环境：</p>
+<blockquote>
+<p>163 INFO: PyInstaller: 3.6<br>164 INFO: Python: 3.7.4<br>187 INFO: Platform: Darwin-19.2.0-x86_64-i386-64bit<br>219 INFO: UPX is available.</p>
+</blockquote>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>基本格式：</p>
+<p><code>pyinstaller</code> options.. <code>myscript.py</code></p>
+<p><code>pyinstaller --windowed --onefile --clean --noconfirm testqt.py</code></p>
+<p>这样生成的文件夹dist中是pkg文件，往往打开就出错，不知为何</p>
+<p>通过上面的代码，根目录下还会生成一个spec文件，spec文件是告诉pyinstaller如何打包你的程序的配置文件，对spec文件做相同的操作，就可以获得app文件。</p>
+<p><code>pyinstaller</code> options.. <code>myscript.spec</code></p>
+<p><code>pyinstaller --clean --noconfirm testqt.spec</code></p>
+<p>怎么直接获得spec文件呢？</p>
+<p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code></p>
+<p>spec文件打开后应该能看到类似这样的字样</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app &#x3D; BUNDLE(exe,</span></pre></td></tr><tr><td class="code"><pre><span class="line">         name&#x3D;&#39;myscript.app&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">         icon&#x3D;None,</span></pre></td></tr><tr><td class="code"><pre><span class="line">         bundle_identifier&#x3D;None)</span></pre></td></tr></table></figure>
+
+
+
+<h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><p>注意短横-后是缩写，–后是全称。</p>
+<p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html" target="_blank" rel="noopener">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p>
+<h3 id="对py的pyinstaller-和pyi-makespec命令（只列出常用）"><a href="#对py的pyinstaller-和pyi-makespec命令（只列出常用）" class="headerlink" title="对py的pyinstaller 和pyi-makespec命令（只列出常用）"></a>对py的pyinstaller 和pyi-makespec命令（只列出常用）</h3><ul>
+<li>–clean<ul>
+<li>Clean PyInstaller cache and remove temporary files before building.</li>
+</ul>
+</li>
+<li>–noconfirm -y<ul>
+<li>Replace output directory (default: SPECPATH/dist/SPECNAME) without asking for confirmation</li>
+</ul>
+</li>
+<li>–windowed -w<ul>
+<li>Windows and Mac OS X: do not provide a console window for standard i/o. On Mac OS X this also triggers building an OS X .app bundle. On Windows this option will be set if the first script is a ‘.pyw’ file. This option is ignored in *NIX systems.</li>
+</ul>
+</li>
+<li>–onefile -F<ul>
+<li>Create a one-file bundled executable.</li>
+</ul>
+</li>
+<li>onedir -D<ul>
+<li>Create a one-folder bundle containing an executable (default)</li>
+</ul>
+</li>
+<li>–osx-bundle-identifier BUNDLE_IDENTIFIER<ul>
+<li>Mac OS X .app bundle identifier is used as the default unique program name for code signing purposes. The usual form is a hierarchical name in reverse DNS notation. For example: com.mycompany.department.appname (default: first script’s basename)</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>官方说对于对py的pyinstaller选项库和pyi-makespec的选项库是一样的。</p>
+<blockquote>
+<p>You create a spec file using this command:</p>
+<blockquote>
+<p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code> [<em>other scripts</em> …]</p>
+</blockquote>
+<p>The <em>options</em> are the same options documented above for the <code>pyinstaller</code> command. This command creates the <code>*name*.spec</code> file but does not go on to build the executable.</p>
+</blockquote>
+<p>然而其实不是的，如果你加入 –clean的选项，则会出现<code>pyi-makespec: error: unrecognized arguments: --clean</code>，经过测试–noconfirm也是不能用的。</p>
+<h3 id="对spec的pyinstaller"><a href="#对spec的pyinstaller" class="headerlink" title="对spec的pyinstaller"></a>对spec的pyinstaller</h3><p>对于spec文件操作，只有这些命令是起作用的。</p>
+<ul>
+<li><code>--upx-dir=</code></li>
+<li><code>--distpath=</code></li>
+<li><code>--workpath=</code></li>
+<li><code>--noconfirm</code></li>
+<li><code>--ascii</code></li>
+<li><code>--clean</code></li>
+</ul>
+<h2 id="高分辨率app"><a href="#高分辨率app" class="headerlink" title="高分辨率app"></a>高分辨率app</h2><p>当你好不容易打包好一个app后问题又来了，你发现你的app的ui异常模糊，分辨率很低。你只需要在spec文件中加上info_plist就能解决问题。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">app &#x3D; BUNDLE(exe,</span></pre></td></tr><tr><td class="code"><pre><span class="line">     name&#x3D;&#39;myscript.app&#39;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">     icon&#x3D;None,</span></pre></td></tr><tr><td class="code"><pre><span class="line">     bundle_identifier&#x3D;None</span></pre></td></tr><tr><td class="code"><pre><span class="line">     info_plist&#x3D;&#123;</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#39;NSHighResolutionCapable&#39;: &#39;True&#39;  #&lt;------这一句</span></pre></td></tr><tr><td class="code"><pre><span class="line">        &#125;,</span></pre></td></tr><tr><td class="code"><pre><span class="line">     )</span></pre></td></tr></table></figure>
+
+
+
+<h2 id="减小app体积"><a href="#减小app体积" class="headerlink" title="减小app体积"></a>减小app体积</h2><p>写python程序的过程中尽量不要使用import，而是用from…import…来减少调用。</p>
+<p>第一步：安装upx</p>
+<ul>
+<li>使用<code>brew install upx</code></li>
+</ul>
+<p>第二部：使用pipenv的干净环境进行打包操作。</p>
+<ul>
+<li>以下是一个本人的通用流程。依次在bash中运行。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pipenv</span></pre></td></tr><tr><td class="code"><pre><span class="line">pip install pipreqs</span></pre></td></tr><tr><td class="code"><pre><span class="line">pipreqs <span class="comment">#generate clean requirements.txt</span></span></pre></td></tr><tr><td class="code"><pre><span class="line">pipenv install</span></pre></td></tr><tr><td class="code"><pre><span class="line">pipenv shell</span></pre></td></tr><tr><td class="code"><pre><span class="line">pip install -r requirements.txt</span></pre></td></tr><tr><td class="code"><pre><span class="line">pyi-makespec --onefile --windowed myscript.py</span></pre></td></tr><tr><td class="code"><pre><span class="line">pyinstaller --noconfirm --clean myscript.spec</span></pre></td></tr></table></figure>
+
+<h2 id="不知道问题出在哪里怎么办？"><a href="#不知道问题出在哪里怎么办？" class="headerlink" title="不知道问题出在哪里怎么办？"></a>不知道问题出在哪里怎么办？</h2><p>运行dist文件夹下的同名unix进程，该进程会在terminal中打开，如果有错误会在terminal中表现出来。</p>
+<p>比如我的app一开始只要双击就会闪退，于是我使用这个方法，控制台中出现了如下错误。经过搜索了解到是setuptools最新的几个版本和pyqt5有点冲突。使用<code>pip install setuptools==44.0.0</code>安装44版本后就没问题了。</p>
+<blockquote>
+<p>File “site-packages/pkg_resources/<strong>init</strong>.py”, line 86, in <module></p>
+<p>ModuleNotFoundError: No module named ‘pkg_resources.py2_warn’</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>copy current code line shortcut in Xcode</title>
+    <url>/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
+    <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
+<p>macos mojave</p>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
+<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
+<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>restart xcode</li>
+<li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
+<li>add your own shortcut</li>
+</ul>
+</li>
+</ul>
+]]></content>
+  </entry>
 </search>
