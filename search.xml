@@ -1,92 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Apple Lines 苹果广告词摘录</title>
-    <url>/2019/12/07/apple-ad-lines/</url>
-    <content><![CDATA[<p>愿苹果永不落幕。</p>
-<p>Long Live with Apple.</p>
-<h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p>
-<blockquote>
-<p>Make someone’s holiday.</p>
-</blockquote>
-<p>Best of 2019</p>
-<blockquote>
-<p>你的心头所爱，我们甄选推荐。</p>
-<p>Loved by you. Awarded bu us.</p>
-</blockquote>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Apple-Watch"><a href="#Apple-Watch" class="headerlink" title="Apple Watch"></a>Apple Watch</h3><p>watch series5</p>
-<blockquote>
-<p>全天候视网膜显示屏，全新登场。</p>
-<p>这块表，好不一样。</p>
-</blockquote>
-<h3 id="AirPods"><a href="#AirPods" class="headerlink" title="AirPods"></a>AirPods</h3><p>AirPods Pro</p>
-<blockquote>
-<p>妙得不同凡响。</p>
-<p>Magic like you’ve never heard.</p>
-</blockquote>
-<h3 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h3><p>iPhone 11 Pro</p>
-<blockquote>
-<p>Pro cameras. Pro display. Pro performance.</p>
-</blockquote>
-<p>iPhone 11</p>
-<blockquote>
-<p>Just the right amount of everything.</p>
-</blockquote>
-<p>iPhone SE 2</p>
-<blockquote>
-<p>Lots to Love, Less to Spend（我觉得用have会更好）</p>
-<p>称心称手，超值入手。</p>
-<hr>
-<p>iPhone SE packs our most powerful chip into our most popular size at our most affordable price. It’s just what you’ve been waiting for.</p>
-<p>Survives splashes,<br>sloshes, sprinkles, sprays,<br>splatters, and spills.</p>
-<p>Built for iOS 13. And beyond.</p>
-</blockquote>
-<h3 id="-tv"><a href="#-tv" class="headerlink" title=" tv+"></a> tv+</h3><blockquote>
-<p>Bring the big screen to your screen.</p>
-</blockquote>
-<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>macOS Catalina</p>
-<blockquote>
-<p>Mac的本领，突飞猛进。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>apple</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>generate requirement.txt for your python project生成</title>
-    <url>/2019/12/13/generate-requirement/</url>
-    <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
-<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
-<li>for packages used in you project<ul>
-<li><code>pip3 install pipreqs</code></li>
-<li><code>pipreqs</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
-<h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote>
-<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
-</blockquote>
-<p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>label encoder和ordinal encoder的区别</title>
-    <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
-    <content><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
-<h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p>
-<p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>
-]]></content>
-      <tags>
-        <tag>sklearn</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hexo NexT主题添加点击爱心效果</title>
     <url>/2020/05/21/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/</url>
     <content><![CDATA[<h1 id="Hexo自定"><a href="#Hexo自定" class="headerlink" title="Hexo自定"></a>Hexo自定</h1><h2 id="Hexo-NexT主题添加点击爱心效果"><a href="#Hexo-NexT主题添加点击爱心效果" class="headerlink" title="Hexo NexT主题添加点击爱心效果"></a>Hexo NexT主题添加点击爱心效果</h2><h3 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h3><p>在<code>/themes/next/source/js/src</code>下新建文件<code>clicklove.js</code>，接着把该<a href="http://7u2ss1.com1.z0.glb.clouddn.com/love.js" target="_blank" rel="noopener">链接</a>下的代码拷贝粘贴到<code>clicklove.js</code>文件中。<br>代码如下：</p>
@@ -131,6 +45,27 @@
 ]]></content>
   </entry>
   <entry>
+    <title>generate requirement.txt for your python project生成</title>
+    <url>/2019/12/13/generate-requirement/</url>
+    <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
+<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
+<li>for packages used in you project<ul>
+<li><code>pip3 install pipreqs</code></li>
+<li><code>pipreqs</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
+<h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote>
+<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
+</blockquote>
+<p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>
+]]></content>
+      <tags>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>remove an executable file to \usr\bin</title>
     <url>/2020/03/30/macos-user-bin/</url>
     <content><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p>
@@ -141,37 +76,24 @@
       </tags>
   </entry>
   <entry>
-    <title>copy current code line shortcut in Xcode</title>
-    <url>/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
-    <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
-<p>macos mojave</p>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
-<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
-<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure>
-
-<ul>
-<li>restart xcode</li>
-<li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
-<li>add your own shortcut</li>
-</ul>
+    <title>pandas strange row number mismatch</title>
+    <url>/2020/05/30/pandas-strange-row-number-mismatch/</url>
+    <content><![CDATA[<h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>一个30兆不到的csv文件，70多万条数据。</p>
+<p>使用read csv加low memory选项读入。</p>
+<p>始终显示：</p>
+<blockquote>
+<p>class ‘pandas.core.frame.DataFrame’&gt;<br>Int64Index: 80350 entries, 0 to 722963<br>Data columns (total 5 columns):<br>user_id         80350 non-null float64<br>item_id_pred    80350 non-null float64<br>score           80350 non-null float64<br>rank            80350 non-null float64<br>item_id_true    80350 non-null float64<br>dtypes: float64(5)<br>memory usage: 3.7 MB</p>
+</blockquote>
+<p>debug途中有一瞬间存在过30m全部读入的情况，可是再难复现。</p>
+<h2 id="可能的原因"><a href="#可能的原因" class="headerlink" title="可能的原因"></a>可能的原因</h2><ul>
+<li><p>文件被其他程序使用着 - 排除，我没有打开</p>
+</li>
+<li><p>文件编码原因 - 未知</p>
+</li>
+<li><p>read_csv选项里还要加东西<code>quoting=csv.QUOTE_NONE, error_bad_lines=Fals</code> -实验后，无用</p>
 </li>
 </ul>
 ]]></content>
-  </entry>
-  <entry>
-    <title>switch提升网速的dns测试</title>
-    <url>/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/</url>
-    <content><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p>
-<p>腾达千兆5g路由器</p>
-<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p>
-<p>218.102.23.228</p>
-<p>203.80.96.10</p>
-]]></content>
-      <tags>
-        <tag>switch</tag>
-      </tags>
   </entry>
   <entry>
     <title>使用pyinstaller将pyqt5打包为MacOS App</title>
@@ -273,6 +195,31 @@
       </tags>
   </entry>
   <entry>
+    <title>label encoder和ordinal encoder的区别</title>
+    <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <content><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
+<h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p>
+<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p>
+<p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>
+]]></content>
+      <tags>
+        <tag>sklearn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>switch提升网速的dns测试</title>
+    <url>/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/</url>
+    <content><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p>
+<p>腾达千兆5g路由器</p>
+<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p>
+<p>218.102.23.228</p>
+<p>203.80.96.10</p>
+]]></content>
+      <tags>
+        <tag>switch</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>腾讯云ubuntu启用root账户</title>
     <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
     <content><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
@@ -307,5 +254,78 @@
       <tags>
         <tag>ubuntu</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Apple Lines 苹果广告词摘录</title>
+    <url>/2019/12/07/apple-ad-lines/</url>
+    <content><![CDATA[<p>愿苹果永不落幕。</p>
+<p>Long Live with Apple.</p>
+<h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p>
+<blockquote>
+<p>Make someone’s holiday.</p>
+</blockquote>
+<p>Best of 2019</p>
+<blockquote>
+<p>你的心头所爱，我们甄选推荐。</p>
+<p>Loved by you. Awarded bu us.</p>
+</blockquote>
+<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Apple-Watch"><a href="#Apple-Watch" class="headerlink" title="Apple Watch"></a>Apple Watch</h3><p>watch series5</p>
+<blockquote>
+<p>全天候视网膜显示屏，全新登场。</p>
+<p>这块表，好不一样。</p>
+</blockquote>
+<h3 id="AirPods"><a href="#AirPods" class="headerlink" title="AirPods"></a>AirPods</h3><p>AirPods Pro</p>
+<blockquote>
+<p>妙得不同凡响。</p>
+<p>Magic like you’ve never heard.</p>
+</blockquote>
+<h3 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h3><p>iPhone 11 Pro</p>
+<blockquote>
+<p>Pro cameras. Pro display. Pro performance.</p>
+</blockquote>
+<p>iPhone 11</p>
+<blockquote>
+<p>Just the right amount of everything.</p>
+</blockquote>
+<p>iPhone SE 2</p>
+<blockquote>
+<p>Lots to Love, Less to Spend（我觉得用have会更好）</p>
+<p>称心称手，超值入手。</p>
+<hr>
+<p>iPhone SE packs our most powerful chip into our most popular size at our most affordable price. It’s just what you’ve been waiting for.</p>
+<p>Survives splashes,<br>sloshes, sprinkles, sprays,<br>splatters, and spills.</p>
+<p>Built for iOS 13. And beyond.</p>
+</blockquote>
+<h3 id="-tv"><a href="#-tv" class="headerlink" title=" tv+"></a> tv+</h3><blockquote>
+<p>Bring the big screen to your screen.</p>
+</blockquote>
+<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>macOS Catalina</p>
+<blockquote>
+<p>Mac的本领，突飞猛进。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>apple</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>copy current code line shortcut in Xcode</title>
+    <url>/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
+    <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
+<p>macos mojave</p>
+<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
+<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
+<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure>
+
+<ul>
+<li>restart xcode</li>
+<li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
+<li>add your own shortcut</li>
+</ul>
+</li>
+</ul>
+]]></content>
   </entry>
 </search>

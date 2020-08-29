@@ -250,6 +250,140 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/30/pandas-strange-row-number-mismatch/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ness001">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/05/30/pandas-strange-row-number-mismatch/" itemprop="url">pandas strange row number mismatch</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-05-30T17:01:00+08:00">
+                2020-05-30
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>一个30兆不到的csv文件，70多万条数据。</p>
+<p>使用read csv加low memory选项读入。</p>
+<p>始终显示：</p>
+<blockquote>
+<p>class ‘pandas.core.frame.DataFrame’&gt;<br>Int64Index: 80350 entries, 0 to 722963<br>Data columns (total 5 columns):<br>user_id         80350 non-null float64<br>item_id_pred    80350 non-null float64<br>score           80350 non-null float64<br>rank            80350 non-null float64<br>item_id_true    80350 non-null float64<br>dtypes: float64(5)<br>memory usage: 3.7 MB</p>
+</blockquote>
+<p>debug途中有一瞬间存在过30m全部读入的情况，可是再难复现。</p>
+<h2 id="可能的原因"><a href="#可能的原因" class="headerlink" title="可能的原因"></a>可能的原因</h2><ul>
+<li><p>文件被其他程序使用着 - 排除，我没有打开</p>
+</li>
+<li><p>文件编码原因 - 未知</p>
+</li>
+<li><p>read_csv选项里还要加东西<code>quoting=csv.QUOTE_NONE, error_bad_lines=Fals</code> -实验后，无用</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/21/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1596,7 +1730,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
