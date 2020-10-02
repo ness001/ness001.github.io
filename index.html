@@ -250,6 +250,217 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/02/prepare-env/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Liang Li">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ness001">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/10/02/prepare-env/" itemprop="url">prepare ml env</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-02T12:37:02+08:00">
+                2020-10-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>I built my new pc last month and walked through the tedious installation process for future machine learning usage.</p>
+<p>Here are some reusable snippets just in case I forgot.</p>
+<h1 id="My-wares"><a href="#My-wares" class="headerlink" title="My wares"></a>My wares</h1><h2 id="hardware"><a href="#hardware" class="headerlink" title="hardware"></a>hardware</h2><ul>
+<li>Intel 10900k</li>
+<li>RTX 2070s Colorful Adoc</li>
+<li>ASUS Z490 edge wifi version</li>
+<li>3600mhz 32G RAM</li>
+</ul>
+<h2 id="software"><a href="#software" class="headerlink" title="software"></a>software</h2><ul>
+<li>win10 professional version</li>
+<li>efficiency tools<ul>
+<li>listary</li>
+<li>chrome<ul>
+<li>toby </li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h1><ul>
+<li>download anaconda</li>
+<li>invoke anaconda prompt</li>
+<li>create env<ul>
+<li><code>conda env create --name wow</code></li>
+<li><code>conda env create --name wow python=3.7.3</code></li>
+</ul>
+</li>
+<li>list env<ul>
+<li><code>conda env list</code></li>
+</ul>
+</li>
+<li>activate env<ul>
+<li><code>conda activate wow</code></li>
+</ul>
+</li>
+<li>list env packages<ul>
+<li><code>conda list</code></li>
+</ul>
+</li>
+<li>clone an env<ul>
+<li><code>conda create --name copy --clone wow</code></li>
+</ul>
+</li>
+<li>remove an env<ul>
+<li><code>conda env remove --name copy</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="add-conda-to-path"><a href="#add-conda-to-path" class="headerlink" title="add conda to path"></a>add conda to path</h2><ul>
+<li>in cmd, <code>where conda</code></li>
+<li>add three paths to <strong>system environment variable</strong> PATH<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+</ul>
+</li>
+</ul>
+<h2 id="change-mirror"><a href="#change-mirror" class="headerlink" title="change mirror"></a>change mirror</h2><p>find <code>.condarc</code> file under your user folder, replace the content with</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line"><span class="attr">channels:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">  <span class="bullet">-</span> <span class="string">defaults</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line"><span class="attr">show_channel_urls:</span> <span class="literal">true</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line"><span class="attr">channel_alias:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line"><span class="attr">default_channels:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">10</span></pre></td><td class="code"><pre><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">11</span></pre></td><td class="code"><pre><span class="line"><span class="attr">custom_channels:</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">12</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">conda-forge:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">13</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">msys2:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">14</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">bioconda:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">15</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">menpo:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">16</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">pytorch:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span></pre></td></tr><tr><td class="gutter"><pre><span class="line">17</span></pre></td><td class="code"><pre><span class="line">  <span class="attr">simpleitk:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span></pre></td></tr></table></figure>
+
+<p>If you need to restore to the default settings, just delete all the lines after show_channel_urls line or you can use <code>conda config --remove-key channels</code></p>
+<h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h1><ul>
+<li><p><code>conda install pip</code></p>
+</li>
+<li><p>change mirror</p>
+<ul>
+<li>（1）阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/" target="_blank" rel="noopener">http://mirrors.aliyun.com/pypi/simple/</a><br>（2）豆瓣<a href="http://pypi.douban.com/simple/" target="_blank" rel="noopener">http://pypi.douban.com/simple/</a><br>（3）清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/" target="_blank" rel="noopener">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>（4）中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/" target="_blank" rel="noopener">http://pypi.mirrors.ustc.edu.cn/simple/</a><br>（5）华中科技大学<a href="http://pypi.hustunique.com/" target="_blank" rel="noopener">http://pypi.hustunique.com/</a></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip install pip -U</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">pip config set global.index-url https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple</span></pre></td></tr></table></figure>
+</li>
+<li><p>search for a package</p>
+<ul>
+<li><code>pip search keras</code></li>
+</ul>
+</li>
+</ul>
+<h1 id="prepare-ml-dl-env"><a href="#prepare-ml-dl-env" class="headerlink" title="prepare ml+dl env"></a>prepare ml+dl env</h1><h2 id="install-packages"><a href="#install-packages" class="headerlink" title="install packages"></a>install packages</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">pip install pandas scikit-learn seaborn tqdm</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">pip install jupyter notebook</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">pip install tensorflow</span></pre></td></tr></table></figure>
+
+<p>the latest tf2 supports both gpu and cpu.</p>
+<p><a href="https://pytorch.org" target="_blank" rel="noopener">https://pytorch.org</a></p>
+<p><a href="https://www.tensorflow.org/install" target="_blank" rel="noopener">https://www.tensorflow.org/install</a></p>
+<h2 id="install-cuda"><a href="#install-cuda" class="headerlink" title="install cuda"></a>install cuda</h2><p>You should check the pytorch page for cuda version or it can’t detect your gpu properly.</p>
+<p>Till now, the latest cuda version you could use is CUDA10.02.</p>
+<p>You can find all cuda versions here.</p>
+<ul>
+<li><a href="https://developer.nvidia.com/cuda-toolkit-archive" target="_blank" rel="noopener">https://developer.nvidia.com/cuda-toolkit-archive</a></li>
+</ul>
+<p>The difference between CUDA and cuDNN:</p>
+<ul>
+<li><a href="https://blog.csdn.net/u014380165/article/details/77340765" target="_blank" rel="noopener">https://blog.csdn.net/u014380165/article/details/77340765</a></li>
+</ul>
+<h2 id="which-cnDNN-should-you-install"><a href="#which-cnDNN-should-you-install" class="headerlink" title="which cnDNN should you install"></a>which cnDNN should you install</h2><p>just use <code>pip install cudnn</code> and it will automatically choose the right version of cudnn for your cuda version.</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/30/pandas-strange-row-number-mismatch/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1550,143 +1761,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Liang Li">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Ness001">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/10/13/copy%20current%20code%20line%20shortcut%20in%20Xcode/" itemprop="url">copy current code line shortcut in Xcode</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-13T13:59:49+08:00">
-                2019-10-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
-<p>macos mojave</p>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
-<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
-<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span></pre></td><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">2</span></pre></td><td class="code"><pre><span class="line">   &lt;dict&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">3</span></pre></td><td class="code"><pre><span class="line">       &lt;key&gt;Cut Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">4</span></pre></td><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, cut:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">5</span></pre></td><td class="code"><pre><span class="line">       &lt;key&gt;Copy Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">6</span></pre></td><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">7</span></pre></td><td class="code"><pre><span class="line">       &lt;key&gt;Duplicate Current Line&lt;&#x2F;key&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">8</span></pre></td><td class="code"><pre><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;&#x2F;string&gt;</span></pre></td></tr><tr><td class="gutter"><pre><span class="line">9</span></pre></td><td class="code"><pre><span class="line">   &lt;&#x2F;dict&gt;</span></pre></td></tr></table></figure>
-
-<ul>
-<li>restart xcode</li>
-<li><code>cmd +</code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
-<li>add your own shortcut</li>
-</ul>
-</li>
-</ul>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">&lt;i class&#x3D;&quot;fa fa-angle-right&quot;&gt;&lt;&#x2F;i&gt;</a>
+  </nav>
+
 
 
           </div>
@@ -1730,7 +1811,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1743,7 +1824,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1755,7 +1836,7 @@
     <h3 class="widget-title">Tag Cloud</h3>
     <div id="myCanvasContainer" class="widget tagcloud">
         <canvas width="250" height="250" id="resCanvas" style="width:100%">
-            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/" rel="tag">MacOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apple/" rel="tag">apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sklearn/" rel="tag">sklearn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/switch/" rel="tag">switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li></ul>
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/" rel="tag">MacOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apple/" rel="tag">apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml101/" rel="tag">ml101</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sklearn/" rel="tag">sklearn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/switch/" rel="tag">switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li></ul>
         </canvas>
     </div>
 </div>
