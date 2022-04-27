@@ -20,5 +20,5 @@ http://yoursite.com/tags/MacOS/
 http://yoursite.com/tags/sklearn/
 http://yoursite.com/tags/nvidia/
 http://yoursite.com/tags/ml101/
-http://yoursite.com/tags/switch/
 http://yoursite.com/tags/ubuntu/
+http://yoursite.com/tags/switch/
