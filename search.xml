@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>Apple Lines 苹果广告词摘录</title>
-    <url>/2019/12/07/apple-ad-lines/</url>
+    <url>//%5Bobject%20Object%5D/2019/12/07/apple-ad-lines</url>
     <content><![CDATA[<p>愿苹果永不落幕。</p>
 <p>Long Live with Apple.</p>
 <h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p>
@@ -55,7 +55,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2021/08/09/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/</url>
+    <url>//%5Bobject%20Object%5D/2021/08/09/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C</url>
     <content><![CDATA[<h1 id="Hexo自定"><a href="#Hexo自定" class="headerlink" title="Hexo自定"></a>Hexo自定</h1><h2 id="Hexo-NexT主题添加点击爱心效果"><a href="#Hexo-NexT主题添加点击爱心效果" class="headerlink" title="Hexo NexT主题添加点击爱心效果"></a>Hexo NexT主题添加点击爱心效果</h2><h3 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h3><p>在<code>/themes/next/source/js/src</code>下新建文件<code>clicklove.js</code>，接着把该<a href="http://7u2ss1.com1.z0.glb.clouddn.com/love.js">链接</a>下的代码拷贝粘贴到<code>clicklove.js</code>文件中。<br>代码如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#x27;&#x27;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
 
@@ -99,7 +99,7 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2021/08/09/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
+    <url>//%5Bobject%20Object%5D/2021/08/09/copy%20current%20code%20line%20shortcut%20in%20Xcode</url>
     <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
 <p>macos mojave</p>
 <h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
@@ -119,7 +119,7 @@
   </entry>
   <entry>
     <title>label encoder和ordinal encoder的区别</title>
-    <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+    <url>//%5Bobject%20Object%5D/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB</url>
     <content><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
 <h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p>
 <h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p>
@@ -131,7 +131,7 @@
   </entry>
   <entry>
     <title>generate requirement.txt for your python project生成</title>
-    <url>/2019/12/13/generate-requirement/</url>
+    <url>//%5Bobject%20Object%5D/2019/12/13/generate-requirement</url>
     <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
 <li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
 <li>for packages used in you project<ul>
@@ -152,7 +152,7 @@
   </entry>
   <entry>
     <title>remove an executable file to \usr\bin</title>
-    <url>/2020/03/30/macos-user-bin/</url>
+    <url>//%5Bobject%20Object%5D/2020/03/30/macos-user-bin</url>
     <content><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p>
 <p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>
 ]]></content>
@@ -162,7 +162,7 @@
   </entry>
   <entry>
     <title>nvidia-ubuntu-env</title>
-    <url>/2020/11/01/nvidia-ubuntu-env/</url>
+    <url>//%5Bobject%20Object%5D/2020/11/01/nvidia-ubuntu-env</url>
     <content><![CDATA[<p>tested for two times.</p>
 <h2 id="prepare"><a href="#prepare" class="headerlink" title="prepare"></a>prepare</h2><ul>
 <li>download os from aliyun: <a href="http://mirrors.aliyun.com/ubuntu-releases/2">http://mirrors.aliyun.com/ubuntu-releases/2</a><ul>
@@ -293,7 +293,7 @@
   </entry>
   <entry>
     <title>pandas strange row number mismatch</title>
-    <url>/2020/05/30/pandas-strange-row-number-mismatch/</url>
+    <url>//%5Bobject%20Object%5D/2020/05/30/pandas-strange-row-number-mismatch</url>
     <content><![CDATA[<h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>一个30兆不到的csv文件，70多万条数据。</p>
 <p>使用read csv加low memory选项读入。</p>
 <p>始终显示：</p>
@@ -313,7 +313,7 @@
   </entry>
   <entry>
     <title>prepare ml env</title>
-    <url>/2020/10/02/prepare-env/</url>
+    <url>//%5Bobject%20Object%5D/2020/10/02/prepare-env</url>
     <content><![CDATA[<p>I built my new pc last month and walked through the tedious installation process for future machine learning usage.</p>
 <p>Here are some reusable snippets just in case I forgot.</p>
 <h1 id="My-wares"><a href="#My-wares" class="headerlink" title="My wares"></a>My wares</h1><h2 id="hardware"><a href="#hardware" class="headerlink" title="hardware"></a>hardware</h2><ul>
@@ -413,7 +413,7 @@
   </entry>
   <entry>
     <title>使用pyinstaller将pyqt5打包为MacOS App</title>
-    <url>/2020/05/20/py-bundle/</url>
+    <url>//%5Bobject%20Object%5D/2020/05/20/py-bundle</url>
     <content><![CDATA[<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p>
 <h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> yourprogram</span><br><span class="line">sudo pyi-makespec --onefile --windowed yourscript.py</span><br><span class="line"><span class="comment">#如果你修改了py文件，也不用再运行一遍👆的代码</span></span><br><span class="line">sudo pyinstaller --clean --noconfirm yourscript.spec</span><br></pre></td></tr></table></figure>
 
@@ -512,7 +512,7 @@
   </entry>
   <entry>
     <title>switch提升网速的dns测试</title>
-    <url>/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/</url>
+    <url>//%5Bobject%20Object%5D/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C</url>
     <content><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p>
 <p>腾达千兆5g路由器</p>
 <h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p>
@@ -525,7 +525,7 @@
   </entry>
   <entry>
     <title>腾讯云ubuntu启用root账户</title>
-    <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
+    <url>//%5Bobject%20Object%5D/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7</url>
     <content><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
 <p>启用root步骤</p>
 <ul>
@@ -561,7 +561,7 @@
   </entry>
   <entry>
     <title>GDB debugging introduction</title>
-    <url>/2022/05/08/gdb-usage-intro/</url>
+    <url>//%5Bobject%20Object%5D/2022/05/08/gdb-usage-intro</url>
     <content><![CDATA[<p>This article introduces the common commands and shortcuts using GDB.<br>Suppose we have a program named <code>hello.c</code> and complied using <code>gcc -g -o hello hello.c</code>.</p>
 <h1 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h1><p>Begin gdb session: <code>gdb hello</code></p>
 <p>Set breakpoint: <code>break #lineNumber</code>, eg <code>break 10</code></p>
