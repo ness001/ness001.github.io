@@ -1,589 +1,236 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title>Apple Lines 苹果广告词摘录</title>
-    <url>//%5Bobject%20Object%5D/2019/12/07/apple-ad-lines</url>
-    <content><![CDATA[<p>愿苹果永不落幕。</p>
-<p>Long Live with Apple.</p>
-<h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p>
-<blockquote>
-<p>Make someone’s holiday.</p>
-</blockquote>
-<p>Best of 2019</p>
-<blockquote>
-<p>你的心头所爱，我们甄选推荐。</p>
-<p>Loved by you. Awarded bu us.</p>
-</blockquote>
-<h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Apple-Watch"><a href="#Apple-Watch" class="headerlink" title="Apple Watch"></a>Apple Watch</h3><p>watch series5</p>
-<blockquote>
-<p>全天候视网膜显示屏，全新登场。</p>
-<p>这块表，好不一样。</p>
-</blockquote>
-<h3 id="AirPods"><a href="#AirPods" class="headerlink" title="AirPods"></a>AirPods</h3><p>AirPods Pro</p>
-<blockquote>
-<p>妙得不同凡响。</p>
-<p>Magic like you’ve never heard.</p>
-</blockquote>
-<h3 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h3><p>iPhone 11 Pro</p>
-<blockquote>
-<p>Pro cameras. Pro display. Pro performance.</p>
-</blockquote>
-<p>iPhone 11</p>
-<blockquote>
-<p>Just the right amount of everything.</p>
-</blockquote>
-<p>iPhone SE 2</p>
-<blockquote>
-<p>Lots to Love, Less to Spend（我觉得用have会更好）</p>
-<p>称心称手，超值入手。</p>
-<hr>
-<p>iPhone SE packs our most powerful chip into our most popular size at our most affordable price. It’s just what you’ve been waiting for.</p>
-<p>Survives splashes,<br>sloshes, sprinkles, sprays,<br>splatters, and spills.</p>
-<p>Built for iOS 13. And beyond.</p>
-</blockquote>
-<h3 id="-tv"><a href="#-tv" class="headerlink" title=" tv+"></a> tv+</h3><blockquote>
-<p>Bring the big screen to your screen.</p>
-</blockquote>
-<h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>macOS Catalina</p>
-<blockquote>
-<p>Mac的本领，突飞猛进。</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>apple</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title></title>
-    <url>//%5Bobject%20Object%5D/2021/08/09/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C</url>
-    <content><![CDATA[<h1 id="Hexo自定"><a href="#Hexo自定" class="headerlink" title="Hexo自定"></a>Hexo自定</h1><h2 id="Hexo-NexT主题添加点击爱心效果"><a href="#Hexo-NexT主题添加点击爱心效果" class="headerlink" title="Hexo NexT主题添加点击爱心效果"></a>Hexo NexT主题添加点击爱心效果</h2><h3 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h3><p>在<code>/themes/next/source/js/src</code>下新建文件<code>clicklove.js</code>，接着把该<a href="http://7u2ss1.com1.z0.glb.clouddn.com/love.js">链接</a>下的代码拷贝粘贴到<code>clicklove.js</code>文件中。<br>代码如下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#x27;&#x27;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改-layout-swig"><a href="#修改-layout-swig" class="headerlink" title="修改_layout.swig"></a>修改_layout.swig</h3><p>在<code>\themes\next\layout\_layout.swig</code>文件末尾添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h2 id="添加动态背景"><a href="#添加动态背景" class="headerlink" title="添加动态背景"></a>添加动态背景</h2><h3 id="layout-swig"><a href="#layout-swig" class="headerlink" title="_layout.swig"></a>_layout.swig</h3><p>找到<code>themes\next\layout\_layout.swig</code>文件，添加内容：<br>在&#96;&#96;里添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div class=&quot;bg_content&quot;&gt;</span><br><span class="line">  &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
-
-<p>仍是该文件，在末尾添加：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/dynamic_bg.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
-
-<h3 id="dynamic-bg-js"><a href="#dynamic-bg-js" class="headerlink" title="dynamic_bg.js"></a>dynamic_bg.js</h3><p>在<code>themes\next\source\js\src</code>中新建文件<code>dynamic_bg.js</code>，代码链接中可见：<a href="https://github.com/asdfv1929/asdfv1929.github.io/blob/master/js/src/dynamic_bg.js">dynamic_bg.js</a></p>
-<h3 id="custom-styl"><a href="#custom-styl" class="headerlink" title="custom.styl"></a>custom.styl</h3><p>在<code>themes\next\source\css\_custom\custom.styl</code>文件末尾添加内容：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.bg_content &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  top: 0;</span><br><span class="line">  z-index: -1;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="tag-cloud"><a href="#tag-cloud" class="headerlink" title="tag cloud"></a>tag cloud</h2><p>进入到 <code>hexo</code> 的根目录，在命令行中输入<code>npm install hexo-tag-cloud@^2.0.* --save </code></p>
-<p>在 <code>package.json</code> 中添加依赖: <code>&quot;hexo-tag-cloud&quot;: &quot;2.0.*&quot;</code> ，在</p>
-<p>在文件 theme&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;sidebar.swig的<code>&lt;/nav&gt;</code>标签之前添加如下代码：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/tagcloud.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/tagcanvas.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;widget-wrap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;widget-title&quot;</span>&gt;</span>Tag Cloud<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;myCanvasContainer&quot;</span> <span class="attr">class</span>=<span class="string">&quot;widget tagcloud&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">&quot;250&quot;</span> <span class="attr">height</span>=<span class="string">&quot;250&quot;</span> <span class="attr">id</span>=<span class="string">&quot;resCanvas&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width=100%&quot;</span>&gt;</span></span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="增加新页面页面"><a href="#增加新页面页面" class="headerlink" title="增加新页面页面"></a>增加新页面页面</h2><p><code>hexo new post tags/about/archive</code></p>
-<p>其中对于tags：</p>
-<p>open …&#x2F;_posts&#x2F;tags&#x2F;index.md</p>
-<blockquote>
-<p>title: tags<br>date: 2020-05-21 18:35:04<br>layout: “tags”<br>type: tags</p>
-</blockquote>
-<h2 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h2><h3 id="导航栏中点击tags，archive，home，浏览器提示找不到，比如annot-GET-tags-20"><a href="#导航栏中点击tags，archive，home，浏览器提示找不到，比如annot-GET-tags-20" class="headerlink" title="导航栏中点击tags，archive，home，浏览器提示找不到，比如annot GET /tags/%20/"></a>导航栏中点击tags，archive，home，浏览器提示找不到，比如<code>annot GET /tags/%20/</code></h3><p>对theme&#x2F;next&#x2F;_config.yml文件进行编辑，将中“||”前的空格删掉，上面已经是编辑好的配置，如下所示。</p>
-<blockquote>
-<p>menu:</p>
-<p>home: &#x2F;|| home</p>
-<p>about: &#x2F;about&#x2F;|| user</p>
-<p>tags: &#x2F;tags&#x2F;|| tags</p>
-<p>#categories: &#x2F;categories&#x2F; || th</p>
-<p>archives: &#x2F;archives&#x2F;|| archive</p>
-<p>#schedule: &#x2F;schedule&#x2F; || calendar</p>
-<p>#sitemap: &#x2F;sitemap.xml || sitemap</p>
-<p># commonweal: &#x2F;404&#x2F;|| heartbeat</p>
-</blockquote>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>//%5Bobject%20Object%5D/2021/08/09/copy%20current%20code%20line%20shortcut%20in%20Xcode</url>
-    <content><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p>
-<p>macos mojave</p>
-<h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul>
-<li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li>
-<li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;/key&gt;</span><br><span class="line">   &lt;dict&gt;</span><br><span class="line">       &lt;key&gt;Cut Current Line&lt;/key&gt;</span><br><span class="line">       &lt;string&gt;selectLine:, cut:&lt;/string&gt;</span><br><span class="line">       &lt;key&gt;Copy Current Line&lt;/key&gt;</span><br><span class="line">       &lt;string&gt;selectLine:, copy:&lt;/string&gt;</span><br><span class="line">       &lt;key&gt;Duplicate Current Line&lt;/key&gt;</span><br><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;/string&gt;</span><br><span class="line">   &lt;/dict&gt;</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li>restart xcode</li>
-<li><code>cmd + </code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul>
-<li>add your own shortcut</li>
-</ul>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>label encoder和ordinal encoder的区别</title>
-    <url>//%5Bobject%20Object%5D/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB</url>
-    <content><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p>
-<h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p>
-<h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p>
-<p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>
-]]></content>
-      <tags>
-        <tag>sklearn</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>generate requirement.txt for your python project生成</title>
-    <url>//%5Bobject%20Object%5D/2019/12/13/generate-requirement</url>
-    <content><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul>
-<li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li>
-<li>for packages used in you project<ul>
-<li><code>pip3 install pipreqs</code></li>
-<li><code>pipreqs </code></li>
-</ul>
-</li>
-</ul>
-<h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p>
-<h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote>
-<p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p>
-</blockquote>
-<p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>remove an executable file to \usr\bin</title>
-    <url>//%5Bobject%20Object%5D/2020/03/30/macos-user-bin</url>
-    <content><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p>
-<p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>
-]]></content>
-      <tags>
-        <tag>MacOS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>nvidia-ubuntu-env</title>
-    <url>//%5Bobject%20Object%5D/2020/11/01/nvidia-ubuntu-env</url>
-    <content><![CDATA[<p>tested for two times.</p>
-<h2 id="prepare"><a href="#prepare" class="headerlink" title="prepare"></a>prepare</h2><ul>
-<li>download os from aliyun: <a href="http://mirrors.aliyun.com/ubuntu-releases/2">http://mirrors.aliyun.com/ubuntu-releases/2</a><ul>
-<li>choose amd64 desktop version</li>
-</ul>
-</li>
-<li>download qv2ray and v2ray core from github</li>
-<li>download ultraiso</li>
-<li>download cuda.run for your ubuntu version<ul>
-<li><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a></li>
-</ul>
-</li>
-</ul>
-<blockquote>
-<p>use a portable disk to save all the files in case next time you need them</p>
-</blockquote>
-<h2 id="install-ubuntu"><a href="#install-ubuntu" class="headerlink" title="install ubuntu"></a>install ubuntu</h2><ol>
-<li>prepare a blank usb flash disk</li>
-<li>open the os iso in ultraios, and write it to your usb flash disk</li>
-<li>compress a blank partition in other disks, compress a 200m partition in your windows-disk</li>
-<li>reboot, in bois, select the usb flash disk, reboot</li>
-<li>edit install config(press <code>e</code>), add <code>nomodeset</code> after <code>quite splash</code> ( or it will 花屏)</li>
-<li>f10 to reboot</li>
-<li>begin install<ol>
-<li>choose the last option for install</li>
-<li>add ubuntu disk partitions on your blank partition<ol>
-<li>&#x2F;, main partition</li>
-<li>home, logistic partition</li>
-<li>add efi on 200m partition</li>
-<li>add swap if your ram is small</li>
-</ol>
-</li>
-</ol>
-</li>
-<li>after installation reboot</li>
-<li>in grub, edit again, use <code>e</code>, add <code>nomodeset</code> after <code>quite splash</code></li>
-</ol>
-<h2 id="install-cuda-and-graphic-card-driver"><a href="#install-cuda-and-graphic-card-driver" class="headerlink" title="install cuda and graphic card driver"></a>install cuda and graphic card driver</h2><p>tutorials on Chinese websites are not good enough. they always said you need to install the driver first, but actually the cuda will recommend you to install the driver while you are installing cuda</p>
-<ol>
-<li><p>copy the cuda.run from your external disk to your local disk</p>
-</li>
-<li><p>change directory to where your cuda is</p>
-</li>
-<li><p><code>sudo chmod x+a cuda.run</code></p>
-</li>
-<li><p><code>sudo ./cuda.run</code></p>
-</li>
-<li><p>after installation, edit environment variables</p>
-</li>
-</ol>
-<p> <code>sudo gedit /etc/profile</code>, append contents like in the bottom</p>
-<p>refer to <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions">https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions</a> for more</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/cuda-11.1/bin<span class="variable">$&#123;PATH:+:<span class="variable">$&#123;PATH&#125;</span>&#125;</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64\</span><br><span class="line">                         <span class="variable">$&#123;LD_LIBRARY_PATH:+:<span class="variable">$&#123;LD_LIBRARY_PATH&#125;</span>&#125;</span></span><br></pre></td></tr></table></figure>
-
-<p><code>source /etc/profile</code> to make it activated</p>
-<h3 id="check"><a href="#check" class="headerlink" title="check"></a>check</h3><ol>
-<li><p>use <code>nvidia-smi</code> and <code>nvcc -V</code> to check whether it works.</p>
-</li>
-<li><p>now you would be able to reboot the system without the need to add <code>nomodeset</code></p>
-</li>
-<li><p>run cuda examples</p>
-<ul>
-<li><p><code>cd ~/nvidia_cuda-11.1-examples</code></p>
-</li>
-<li><p><code>make</code></p>
-</li>
-<li><p><code>devicequery</code>, it is under utilities&#x2F;devicequery</p>
-</li>
-</ul>
-</li>
-</ol>
-<h2 id="install-docker"><a href="#install-docker" class="headerlink" title="install docker"></a>install docker</h2><p><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository \</span><br><span class="line">   <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">   <span class="subst">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">   stable&quot;</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
-
-<h3 id="check-1"><a href="#check-1" class="headerlink" title="check"></a>check</h3><p><code>sudo docker run hello-world</code></p>
-<h3 id="add-permission"><a href="#add-permission" class="headerlink" title="add permission"></a>add permission</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo gpasswd -a current_user_name docker</span><br><span class="line">Sudo service docker restart</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
-
-<h2 id="install-others-just-follow-the-document"><a href="#install-others-just-follow-the-document" class="headerlink" title="install others, just follow the document"></a>install others, just follow the document</h2><ul>
-<li>ngc</li>
-<li>nvidia docker</li>
-</ul>
-<h2 id="use-vm-to-boost-local-docker-pull"><a href="#use-vm-to-boost-local-docker-pull" class="headerlink" title="use vm to boost local docker pull"></a>use vm to boost local docker pull</h2><ol>
-<li>cd to <code>vm_for_docker_pull</code> ( it is from my private repo)</li>
-<li>in bash, <code>ssh -i nessvm-asia_key.pem ness@52.175.13.200</code></li>
-<li>pull the containers from NGC </li>
-<li><code>docker tag image_from_ngc registry.cn-hangzhou.aliyuncs.com/ness001/image_name</code></li>
-<li>on your local computer, <code>docker pull registry.cn-hangzhou.aliyuncs.com/ness001/image_name</code></li>
-</ol>
-<h3 id="current-pushed-images"><a href="#current-pushed-images" class="headerlink" title="current pushed images"></a>current pushed images</h3><p><code>registry.cn-hangzhou.aliyuncs.com/ness001/</code> +<code>aliyun image name</code></p>
-<table>
-<thead>
-<tr>
-<th>original name</th>
-<th>tag</th>
-<th>aliyun image name</th>
-<th>usage</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>nvcr.io&#x2F;nvidia&#x2F;tlt-streamanalytics</td>
-<td>v2.0_py3</td>
-<td>nv-tlt</td>
-<td>transfer learning toolkit</td>
-</tr>
-<tr>
-<td>nvidia&#x2F;cuda</td>
-<td>11.0-base</td>
-<td>cuda11</td>
-<td>test for nvidia-docker2</td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-]]></content>
-      <tags>
-        <tag>nvidia</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>pandas strange row number mismatch</title>
-    <url>//%5Bobject%20Object%5D/2020/05/30/pandas-strange-row-number-mismatch</url>
-    <content><![CDATA[<h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>一个30兆不到的csv文件，70多万条数据。</p>
-<p>使用read csv加low memory选项读入。</p>
-<p>始终显示：</p>
-<blockquote>
-<p>class ‘pandas.core.frame.DataFrame’&gt;<br>Int64Index: 80350 entries, 0 to 722963<br>Data columns (total 5 columns):<br>user_id         80350 non-null float64<br>item_id_pred    80350 non-null float64<br>score           80350 non-null float64<br>rank            80350 non-null float64<br>item_id_true    80350 non-null float64<br>dtypes: float64(5)<br>memory usage: 3.7 MB</p>
-</blockquote>
-<p>debug途中有一瞬间存在过30m全部读入的情况，可是再难复现。</p>
-<h2 id="可能的原因"><a href="#可能的原因" class="headerlink" title="可能的原因"></a>可能的原因</h2><ul>
-<li><p>文件被其他程序使用着 - 排除，我没有打开</p>
-</li>
-<li><p>文件编码原因 - 未知</p>
-</li>
-<li><p>read_csv选项里还要加东西<code>quoting=csv.QUOTE_NONE, error_bad_lines=Fals</code> -实验后，无用</p>
-</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>prepare ml env</title>
-    <url>//%5Bobject%20Object%5D/2020/10/02/prepare-env</url>
-    <content><![CDATA[<p>I built my new pc last month and walked through the tedious installation process for future machine learning usage.</p>
-<p>Here are some reusable snippets just in case I forgot.</p>
-<h1 id="My-wares"><a href="#My-wares" class="headerlink" title="My wares"></a>My wares</h1><h2 id="hardware"><a href="#hardware" class="headerlink" title="hardware"></a>hardware</h2><ul>
-<li>Intel 10900k</li>
-<li>RTX 2070s Colorful Adoc</li>
-<li>ASUS Z490 edge wifi version</li>
-<li>3600mhz 32G RAM</li>
-</ul>
-<h2 id="software"><a href="#software" class="headerlink" title="software"></a>software</h2><ul>
-<li>win10 professional version</li>
-<li>efficiency tools<ul>
-<li>listary</li>
-<li>chrome<ul>
-<li>toby</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<h1 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h1><ul>
-<li>download anaconda</li>
-<li>invoke anaconda prompt</li>
-<li>create env<ul>
-<li><code>conda create --name wow</code></li>
-<li><code>conda create --name wow python=3.7.3</code></li>
-</ul>
-</li>
-<li>list env<ul>
-<li><code>conda env list</code></li>
-</ul>
-</li>
-<li>activate env<ul>
-<li><code>conda activate wow</code></li>
-</ul>
-</li>
-<li>list env packages<ul>
-<li><code>conda list</code></li>
-</ul>
-</li>
-<li>clone an env<ul>
-<li><code>conda create --name copy --clone wow</code></li>
-</ul>
-</li>
-<li>remove an env<ul>
-<li><code>conda env remove --name copy</code></li>
-</ul>
-</li>
-</ul>
-<h2 id="add-conda-to-path"><a href="#add-conda-to-path" class="headerlink" title="add conda to path"></a>add conda to path</h2><ul>
-<li>in cmd, <code>where conda</code></li>
-<li>add three paths to <strong>system environment variable</strong> PATH<ul>
-<li>1</li>
-<li>2</li>
-<li>3</li>
-</ul>
-</li>
-</ul>
-<h2 id="change-mirror"><a href="#change-mirror" class="headerlink" title="change mirror"></a>change mirror</h2><p>find <code>.condarc</code> file under your user folder, replace the content with</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">defaults</span></span><br><span class="line"><span class="attr">show_channel_urls:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">channel_alias:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda</span></span><br><span class="line"><span class="attr">default_channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span></span><br><span class="line"><span class="attr">custom_channels:</span></span><br><span class="line">  <span class="attr">conda-forge:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">msys2:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">bioconda:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">menpo:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">pytorch:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">simpleitk:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br></pre></td></tr></table></figure>
-
-<p>If you need to restore to the default settings, just delete all the lines after show_channel_urls line or you can use <code>conda config --remove-key channels</code></p>
-<h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h1><ul>
-<li><p><code>conda install pip</code></p>
-</li>
-<li><p>change mirror</p>
-<ul>
-<li>（1）阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>（2）豆瓣<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>（3）清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>（4）中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a><br>（5）华中科技大学<a href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a></li>
-</ul>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install pip -U</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>search for a package</p>
-<ul>
-<li><code>pip search keras</code></li>
-</ul>
-</li>
-</ul>
-<h1 id="prepare-ml-dl-env"><a href="#prepare-ml-dl-env" class="headerlink" title="prepare ml+dl env"></a>prepare ml+dl env</h1><h2 id="install-packages"><a href="#install-packages" class="headerlink" title="install packages"></a>install packages</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">pip install pandas scikit-learn seaborn tqdm</span><br><span class="line">pip install jupyter notebook</span><br><span class="line">pip install jupyter_contrib_nbextensions</span><br></pre></td></tr></table></figure>
-
-<p>the latest tf2 supports both gpu and cpu.</p>
-<p><a href="https://pytorch.org/">https://pytorch.org</a></p>
-<p><a href="https://www.tensorflow.org/install">https://www.tensorflow.org/install</a></p>
-<h2 id="install-cuda"><a href="#install-cuda" class="headerlink" title="install cuda"></a>install cuda</h2><p>You should check the pytorch page for cuda version or it can’t detect your gpu properly.</p>
-<p>Till now, the latest cuda version you could use is CUDA10.02.</p>
-<p>You can find all cuda versions here.</p>
-<ul>
-<li><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a></li>
-</ul>
-<p>The difference between CUDA and cuDNN:</p>
-<ul>
-<li><a href="https://blog.csdn.net/u014380165/article/details/77340765">https://blog.csdn.net/u014380165/article/details/77340765</a></li>
-</ul>
-<h2 id="which-cnDNN-should-you-install"><a href="#which-cnDNN-should-you-install" class="headerlink" title="which cnDNN should you install"></a>which cnDNN should you install</h2><p>just use <code>pip install cudnn</code> and it will automatically choose the right version of cudnn for your cuda version.</p>
-]]></content>
-      <tags>
-        <tag>ml101</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>使用pyinstaller将pyqt5打包为MacOS App</title>
-    <url>//%5Bobject%20Object%5D/2020/05/20/py-bundle</url>
-    <content><![CDATA[<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p>
-<h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> yourprogram</span><br><span class="line">sudo pyi-makespec --onefile --windowed yourscript.py</span><br><span class="line"><span class="comment">#如果你修改了py文件，也不用再运行一遍👆的代码</span></span><br><span class="line">sudo pyinstaller --clean --noconfirm yourscript.spec</span><br></pre></td></tr></table></figure>
-
-<p>出现no permission问题，用sudo就对了。</p>
-<p>我的环境：</p>
-<blockquote>
-<p>163 INFO: PyInstaller: 3.6<br>164 INFO: Python: 3.7.4<br>187 INFO: Platform: Darwin-19.2.0-x86_64-i386-64bit<br>219 INFO: UPX is available.</p>
-</blockquote>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>基本格式：</p>
-<p><code>pyinstaller</code> options.. <code>myscript.py</code></p>
-<p><code>pyinstaller --windowed --onefile --clean --noconfirm testqt.py</code></p>
-<p>这样生成的文件夹dist中是pkg文件，往往打开就出错，不知为何</p>
-<p>通过上面的代码，根目录下还会生成一个spec文件，spec文件是告诉pyinstaller如何打包你的程序的配置文件，对spec文件做相同的操作，就可以获得app文件。</p>
-<p><code>pyinstaller</code> options.. <code>myscript.spec</code></p>
-<p><code>pyinstaller --clean --noconfirm testqt.spec</code></p>
-<p>怎么直接获得spec文件呢？</p>
-<p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code></p>
-<p>spec文件打开后应该能看到类似这样的字样</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">app = BUNDLE(exe,</span><br><span class="line">         name=&#x27;myscript.app&#x27;,</span><br><span class="line">         icon=None,</span><br><span class="line">         bundle_identifier=None)</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><p>注意短横-后是缩写，–后是全称。</p>
-<p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p>
-<h3 id="对py的pyinstaller-和pyi-makespec命令（只列出常用）"><a href="#对py的pyinstaller-和pyi-makespec命令（只列出常用）" class="headerlink" title="对py的pyinstaller 和pyi-makespec命令（只列出常用）"></a>对py的pyinstaller 和pyi-makespec命令（只列出常用）</h3><ul>
-<li>–clean<ul>
-<li>Clean PyInstaller cache and remove temporary files before building.</li>
-</ul>
-</li>
-<li>–noconfirm -y<ul>
-<li>Replace output directory (default: SPECPATH&#x2F;dist&#x2F;SPECNAME) without asking for confirmation</li>
-</ul>
-</li>
-<li>–windowed -w<ul>
-<li>Windows and Mac OS X: do not provide a console window for standard i&#x2F;o. On Mac OS X this also triggers building an OS X .app bundle. On Windows this option will be set if the first script is a ‘.pyw’ file. This option is ignored in *NIX systems.</li>
-</ul>
-</li>
-<li>–onefile -F<ul>
-<li>Create a one-file bundled executable.</li>
-</ul>
-</li>
-<li>onedir -D<ul>
-<li>Create a one-folder bundle containing an executable (default)</li>
-</ul>
-</li>
-<li>–osx-bundle-identifier BUNDLE_IDENTIFIER<ul>
-<li>Mac OS X .app bundle identifier is used as the default unique program name for code signing purposes. The usual form is a hierarchical name in reverse DNS notation. For example: com.mycompany.department.appname (default: first script’s basename)</li>
-</ul>
-</li>
-</ul>
-<hr>
-<p>官方说对于对py的pyinstaller选项库和pyi-makespec的选项库是一样的。</p>
-<blockquote>
-<p>You create a spec file using this command:</p>
-<blockquote>
-<p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code> [<em>other scripts</em> …]</p>
-</blockquote>
-<p>The <em>options</em> are the same options documented above for the <code>pyinstaller</code> command. This command creates the <code>*name*.spec</code> file but does not go on to build the executable.</p>
-</blockquote>
-<p>然而其实不是的，如果你加入 –clean的选项，则会出现<code>pyi-makespec: error: unrecognized arguments: --clean</code>，经过测试–noconfirm也是不能用的。</p>
-<h3 id="对spec的pyinstaller"><a href="#对spec的pyinstaller" class="headerlink" title="对spec的pyinstaller"></a>对spec的pyinstaller</h3><p>对于spec文件操作，只有这些命令是起作用的。</p>
-<ul>
-<li><code>--upx-dir=</code></li>
-<li><code>--distpath=</code></li>
-<li><code>--workpath=</code></li>
-<li><code>--noconfirm</code></li>
-<li><code>--ascii</code></li>
-<li><code>--clean</code></li>
-</ul>
-<h2 id="高分辨率app"><a href="#高分辨率app" class="headerlink" title="高分辨率app"></a>高分辨率app</h2><p>当你好不容易打包好一个app后问题又来了，你发现你的app的ui异常模糊，分辨率很低。你只需要在spec文件中加上info_plist就能解决问题。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">app = BUNDLE(exe,</span><br><span class="line">     name=&#x27;myscript.app&#x27;,</span><br><span class="line">     icon=None,</span><br><span class="line">     bundle_identifier=None</span><br><span class="line">     info_plist=&#123;</span><br><span class="line">        &#x27;NSHighResolutionCapable&#x27;: &#x27;True&#x27;  #&lt;------这一句</span><br><span class="line">        &#125;,</span><br><span class="line">     )</span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="减小app体积"><a href="#减小app体积" class="headerlink" title="减小app体积"></a>减小app体积</h2><p>写python程序的过程中尽量不要使用import，而是用from…import…来减少调用。</p>
-<p>第一步：安装upx</p>
-<ul>
-<li>使用<code>brew install upx</code></li>
-</ul>
-<p>第二部：使用pipenv的干净环境进行打包操作。</p>
-<ul>
-<li>以下是一个本人的通用流程。依次在bash中运行。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">pip install pipenv</span><br><span class="line">pip install pipreqs</span><br><span class="line">pipreqs <span class="comment">#generate clean requirements.txt</span></span><br><span class="line">pipenv install</span><br><span class="line">pipenv shell</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pyi-makespec --onefile --windowed myscript.py</span><br><span class="line">pyinstaller --noconfirm --clean myscript.spec</span><br></pre></td></tr></table></figure>
-
-<h2 id="不知道问题出在哪里怎么办？"><a href="#不知道问题出在哪里怎么办？" class="headerlink" title="不知道问题出在哪里怎么办？"></a>不知道问题出在哪里怎么办？</h2><p>运行dist文件夹下的同名unix进程，该进程会在terminal中打开，如果有错误会在terminal中表现出来。</p>
-<p>比如我的app一开始只要双击就会闪退，于是我使用这个方法，控制台中出现了如下错误。经过搜索了解到是setuptools最新的几个版本和pyqt5有点冲突。使用<code>pip install setuptools==44.0.0</code>安装44版本后就没问题了。</p>
-<blockquote>
-<p>File “site-packages&#x2F;pkg_resources&#x2F;<strong>init</strong>.py”, line 86, in <module></p>
-<p>ModuleNotFoundError: No module named ‘pkg_resources.py2_warn’</p>
-</blockquote>
-]]></content>
-      <tags>
-        <tag>python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>switch提升网速的dns测试</title>
-    <url>//%5Bobject%20Object%5D/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C</url>
-    <content><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p>
-<p>腾达千兆5g路由器</p>
-<h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p>
-<p>218.102.23.228</p>
-<p>203.80.96.10</p>
-]]></content>
-      <tags>
-        <tag>switch</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>腾讯云ubuntu启用root账户</title>
-    <url>//%5Bobject%20Object%5D/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7</url>
-    <content><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p>
-<p>启用root步骤</p>
-<ul>
-<li><p>sudo passwd root</p>
-</li>
-<li><p>sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</p>
-<ul>
-<li><p>esc，在命令行模式下，输入 &#x2F;PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p>
-</li>
-<li><p>i，删除#，修改后面的 prohibit-password 为 yes</p>
-</li>
-<li><blockquote>
-<h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p>
-<p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p>
-<p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p>
-<p>如果这个选项设置为“no”，root 不允许登录。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>sudo service ssh restart （！！！）</p>
-</li>
-<li><p>切换到root </p>
-<ul>
-<li>su root</li>
-</ul>
-</li>
-</ul>
-]]></content>
-      <tags>
-        <tag>ubuntu</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>GDB debugging introduction</title>
-    <url>//%5Bobject%20Object%5D/2022/05/08/gdb-usage-intro</url>
-    <content><![CDATA[<p>This article introduces the common commands and shortcuts using GDB.<br>Suppose we have a program named <code>hello.c</code> and complied using <code>gcc -g -o hello hello.c</code>.</p>
-<h1 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h1><p>Begin gdb session: <code>gdb hello</code></p>
-<p>Set breakpoint: <code>break #lineNumber</code>, eg <code>break 10</code></p>
-<blockquote>
-<p>Hint: Find line number by using <code>vim hello.c</code>, press escape and input <code>:set nu</code></p>
-</blockquote>
-<p>Run: <code>run</code>, run with stdin: <code>run &lt; inputfile.txt</code></p>
-<p>Start debugging: <code>start</code></p>
-<p>Show local variables: <code>info locals</code></p>
-<p>Watch a local variable: <code>watch variableName</code></p>
-<p>Continue debugging: <code>continue</code></p>
-<p>Step in: <code>step</code>, executed the next line without stepping in: <code>next</code></p>
-<p>Display a variable at each step: <code>display variableName</code></p>
-<h1 id="shortcuts"><a href="#shortcuts" class="headerlink" title="shortcuts"></a>shortcuts</h1><p>In gdb session, press <code>ctrl+x</code> and then press <code>a</code> to show the source code. Press <code>ctrl+x</code> and then press <code>2</code> to show the corresponding assembly code.</p>
-<p><img src="/./assets/gdb-source-code.png" alt="gdb source code"></p>
-<blockquote>
-<p>You could also install cgdb to have better experiences. Use <code>cgdb hello</code> and press <code>escape</code> to scroll the source code and press <code>i</code> to exe command</p>
-</blockquote>
-<p>Press <code>ctrl+x</code> and then press <code>2</code> one more time to show the CPU register group.<br><img src="/./assets/gdb-reg.png" alt="gdb cpu registry"><br>Use <code>info all-registers</code> to show all registers.<br>Use <code>tui reg float</code> to show float registry group.</p>
-]]></content>
-      <tags>
-        <tag>cs61c tools</tag>
-      </tags>
-  </entry>
+<search> 
+  
+  
+    
+    <entry>
+      <title>GDB debugging introduction</title>
+      <link href="/2022/05/08/gdb-usage-intro/"/>
+      <url>/2022/05/08/gdb-usage-intro/</url>
+      
+        <content type="html"><![CDATA[<p>This article introduces the common commands and shortcuts using GDB.<br>Suppose we have a program named <code>hello.c</code> and complied using <code>gcc -g -o hello hello.c</code>.</p><h1 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h1><p>Begin gdb session: <code>gdb hello</code></p><p>Set breakpoint: <code>break #lineNumber</code>, eg <code>break 10</code></p><blockquote><p>Hint: Find line number by using <code>vim hello.c</code>, press escape and input <code>:set nu</code></p></blockquote><p>Run: <code>run</code>, run with stdin: <code>run &lt; inputfile.txt</code></p><p>Start debugging: <code>start</code></p><p>Show local variables: <code>info locals</code></p><p>Watch a local variable: <code>watch variableName</code></p><p>Continue debugging: <code>continue</code></p><p>Step in: <code>step</code>, executed the next line without stepping in: <code>next</code></p><p>Display a variable at each step: <code>display variableName</code></p><h1 id="shortcuts"><a href="#shortcuts" class="headerlink" title="shortcuts"></a>shortcuts</h1><p>In gdb session, press <code>ctrl+x</code> and then press <code>a</code> to show the source code. Press <code>ctrl+x</code> and then press <code>2</code> to show the corresponding assembly code.</p><p><img src="/./assets/gdb-source-code.png" alt="gdb source code"></p><blockquote><p>You could also install cgdb to have better experiences. Use <code>cgdb hello</code> and press <code>escape</code> to scroll the source code and press <code>i</code> to exe command</p></blockquote><p>Press <code>ctrl+x</code> and then press <code>2</code> one more time to show the CPU register group.<br><img src="/./assets/gdb-reg.png" alt="gdb cpu registry"><br>Use <code>info all-registers</code> to show all registers.<br>Use <code>tui reg float</code> to show float registry group.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> cs61c tools </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2021/08/09/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/"/>
+      <url>/2021/08/09/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo自定"><a href="#Hexo自定" class="headerlink" title="Hexo自定"></a>Hexo自定</h1><h2 id="Hexo-NexT主题添加点击爱心效果"><a href="#Hexo-NexT主题添加点击爱心效果" class="headerlink" title="Hexo NexT主题添加点击爱心效果"></a>Hexo NexT主题添加点击爱心效果</h2><h3 id="创建js文件"><a href="#创建js文件" class="headerlink" title="创建js文件"></a>创建js文件</h3><p>在<code>/themes/next/source/js/src</code>下新建文件<code>clicklove.js</code>，接着把该<a href="http://7u2ss1.com1.z0.glb.clouddn.com/love.js">链接</a>下的代码拷贝粘贴到<code>clicklove.js</code>文件中。<br>代码如下：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">!function(e,t,a)&#123;function n()&#123;c(&quot;.heart&#123;width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);&#125;.heart:after,.heart:before&#123;content: &#x27;&#x27;;width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: fixed;&#125;.heart:after&#123;top: -5px;&#125;.heart:before&#123;left: -5px;&#125;&quot;),o(),r()&#125;function r()&#123;for(var e=0;e&lt;d.length;e++)d[e].alpha&lt;=0?(t.body.removeChild(d[e].el),d.splice(e,1)):(d[e].y--,d[e].scale+=.004,d[e].alpha-=.013,d[e].el.style.cssText=&quot;left:&quot;+d[e].x+&quot;px;top:&quot;+d[e].y+&quot;px;opacity:&quot;+d[e].alpha+&quot;;transform:scale(&quot;+d[e].scale+&quot;,&quot;+d[e].scale+&quot;) rotate(45deg);background:&quot;+d[e].color+&quot;;z-index:99999&quot;);requestAnimationFrame(r)&#125;function o()&#123;var t=&quot;function&quot;==typeof e.onclick&amp;&amp;e.onclick;e.onclick=function(e)&#123;t&amp;&amp;t(),i(e)&#125;&#125;function i(e)&#123;var a=t.createElement(&quot;div&quot;);a.className=&quot;heart&quot;,d.push(&#123;el:a,x:e.clientX-5,y:e.clientY-5,scale:1,alpha:1,color:s()&#125;),t.body.appendChild(a)&#125;function c(e)&#123;var a=t.createElement(&quot;style&quot;);a.type=&quot;text/css&quot;;try&#123;a.appendChild(t.createTextNode(e))&#125;catch(t)&#123;a.styleSheet.cssText=e&#125;t.getElementsByTagName(&quot;head&quot;)[0].appendChild(a)&#125;function s()&#123;return&quot;rgb(&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;,&quot;+~~(255*Math.random())+&quot;)&quot;&#125;var d=[];e.requestAnimationFrame=function()&#123;return e.requestAnimationFrame||e.webkitRequestAnimationFrame||e.mozRequestAnimationFrame||e.oRequestAnimationFrame||e.msRequestAnimationFrame||function(e)&#123;setTimeout(e,1e3/60)&#125;&#125;(),n()&#125;(window,document);</span><br></pre></td></tr></table></figure><h3 id="修改-layout-swig"><a href="#修改-layout-swig" class="headerlink" title="修改_layout.swig"></a>修改_layout.swig</h3><p>在<code>\themes\next\layout\_layout.swig</code>文件末尾添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 页面点击小红心 --&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/clicklove.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><h2 id="添加动态背景"><a href="#添加动态背景" class="headerlink" title="添加动态背景"></a>添加动态背景</h2><h3 id="layout-swig"><a href="#layout-swig" class="headerlink" title="_layout.swig"></a>_layout.swig</h3><p>找到<code>themes\next\layout\_layout.swig</code>文件，添加内容：<br>在&#96;&#96;里添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;bg_content&quot;&gt;</span><br><span class="line">  &lt;canvas id=&quot;canvas&quot;&gt;&lt;/canvas&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure><p>仍是该文件，在末尾添加：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=&quot;text/javascript&quot; src=&quot;/js/src/dynamic_bg.js&quot;&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure><h3 id="dynamic-bg-js"><a href="#dynamic-bg-js" class="headerlink" title="dynamic_bg.js"></a>dynamic_bg.js</h3><p>在<code>themes\next\source\js\src</code>中新建文件<code>dynamic_bg.js</code>，代码链接中可见：<a href="https://github.com/asdfv1929/asdfv1929.github.io/blob/master/js/src/dynamic_bg.js">dynamic_bg.js</a></p><h3 id="custom-styl"><a href="#custom-styl" class="headerlink" title="custom.styl"></a>custom.styl</h3><p>在<code>themes\next\source\css\_custom\custom.styl</code>文件末尾添加内容：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.bg_content &#123;</span><br><span class="line">  position: fixed;</span><br><span class="line">  top: 0;</span><br><span class="line">  z-index: -1;</span><br><span class="line">  width: 100%;</span><br><span class="line">  height: 100%;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="tag-cloud"><a href="#tag-cloud" class="headerlink" title="tag cloud"></a>tag cloud</h2><p>进入到 <code>hexo</code> 的根目录，在命令行中输入<code>npm install hexo-tag-cloud@^2.0.* --save </code></p><p>在 <code>package.json</code> 中添加依赖: <code>&quot;hexo-tag-cloud&quot;: &quot;2.0.*&quot;</code> ，在</p><p>在文件 theme&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;sidebar.swig的<code>&lt;/nav&gt;</code>标签之前添加如下代码：</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if site.tags.length &gt; 1 %&#125;</span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/tagcloud.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">charset</span>=<span class="string">&quot;utf-8&quot;</span> <span class="attr">src</span>=<span class="string">&quot;/js/tagcanvas.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;widget-wrap&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">h3</span> <span class="attr">class</span>=<span class="string">&quot;widget-title&quot;</span>&gt;</span>Tag Cloud<span class="tag">&lt;/<span class="name">h3</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;myCanvasContainer&quot;</span> <span class="attr">class</span>=<span class="string">&quot;widget tagcloud&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">&quot;250&quot;</span> <span class="attr">height</span>=<span class="string">&quot;250&quot;</span> <span class="attr">id</span>=<span class="string">&quot;resCanvas&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width=100%&quot;</span>&gt;</span></span><br><span class="line">            &#123;&#123; list_tags() &#125;&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure><h2 id="增加新页面页面"><a href="#增加新页面页面" class="headerlink" title="增加新页面页面"></a>增加新页面页面</h2><p><code>hexo new post tags/about/archive</code></p><p>其中对于tags：</p><p>open …&#x2F;_posts&#x2F;tags&#x2F;index.md</p><blockquote><p>title: tags<br>date: 2020-05-21 18:35:04<br>layout: “tags”<br>type: tags</p></blockquote><h2 id="bug"><a href="#bug" class="headerlink" title="bug"></a>bug</h2><h3 id="导航栏中点击tags，archive，home，浏览器提示找不到，比如annot-GET-tags-20"><a href="#导航栏中点击tags，archive，home，浏览器提示找不到，比如annot-GET-tags-20" class="headerlink" title="导航栏中点击tags，archive，home，浏览器提示找不到，比如annot GET /tags/%20/"></a>导航栏中点击tags，archive，home，浏览器提示找不到，比如<code>annot GET /tags/%20/</code></h3><p>对theme&#x2F;next&#x2F;_config.yml文件进行编辑，将中“||”前的空格删掉，上面已经是编辑好的配置，如下所示。</p><blockquote><p>menu:</p><p>home: &#x2F;|| home</p><p>about: &#x2F;about&#x2F;|| user</p><p>tags: &#x2F;tags&#x2F;|| tags</p><p>#categories: &#x2F;categories&#x2F; || th</p><p>archives: &#x2F;archives&#x2F;|| archive</p><p>#schedule: &#x2F;schedule&#x2F; || calendar</p><p>#sitemap: &#x2F;sitemap.xml || sitemap</p><p># commonweal: &#x2F;404&#x2F;|| heartbeat</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2021/08/09/copy%20current%20code%20line%20shortcut%20in%20Xcode/"/>
+      <url>/2021/08/09/copy%20current%20code%20line%20shortcut%20in%20Xcode/</url>
+      
+        <content type="html"><![CDATA[<h2 id="Env"><a href="#Env" class="headerlink" title="Env"></a>Env</h2><p>10.3 xcode</p><p>macos mojave</p><h2 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h2><ul><li>open <code>/Applications/Xcode.app/Contents/Frameworks/IDEKit.framework/Versions/A/Resources/IDETextKeyBindingSet.plist</code></li><li>Add the following lines into the <strong>root dictionary</strong> (after first dict occurrence)</li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;key&gt;Sublime Commands&lt;/key&gt;</span><br><span class="line">   &lt;dict&gt;</span><br><span class="line">       &lt;key&gt;Cut Current Line&lt;/key&gt;</span><br><span class="line">       &lt;string&gt;selectLine:, cut:&lt;/string&gt;</span><br><span class="line">       &lt;key&gt;Copy Current Line&lt;/key&gt;</span><br><span class="line">       &lt;string&gt;selectLine:, copy:&lt;/string&gt;</span><br><span class="line">       &lt;key&gt;Duplicate Current Line&lt;/key&gt;</span><br><span class="line">       &lt;string&gt;selectLine:, copy:, moveToBeginningOfLine:, paste:, moveToEndOfLine:&lt;/string&gt;</span><br><span class="line">   &lt;/dict&gt;</span><br></pre></td></tr></table></figure><ul><li>restart xcode</li><li><code>cmd + </code>, go to <code>key bindings</code>, go to Text, go to Sublime Commands<ul><li>add your own shortcut</li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>nvidia-ubuntu-env</title>
+      <link href="/2020/11/01/nvidia-ubuntu-env/"/>
+      <url>/2020/11/01/nvidia-ubuntu-env/</url>
+      
+        <content type="html"><![CDATA[<p>tested for two times.</p><h2 id="prepare"><a href="#prepare" class="headerlink" title="prepare"></a>prepare</h2><ul><li>download os from aliyun: <a href="http://mirrors.aliyun.com/ubuntu-releases/2">http://mirrors.aliyun.com/ubuntu-releases/2</a><ul><li>choose amd64 desktop version</li></ul></li><li>download qv2ray and v2ray core from github</li><li>download ultraiso</li><li>download cuda.run for your ubuntu version<ul><li><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a></li></ul></li></ul><blockquote><p>use a portable disk to save all the files in case next time you need them</p></blockquote><h2 id="install-ubuntu"><a href="#install-ubuntu" class="headerlink" title="install ubuntu"></a>install ubuntu</h2><ol><li>prepare a blank usb flash disk</li><li>open the os iso in ultraios, and write it to your usb flash disk</li><li>compress a blank partition in other disks, compress a 200m partition in your windows-disk</li><li>reboot, in bois, select the usb flash disk, reboot</li><li>edit install config(press <code>e</code>), add <code>nomodeset</code> after <code>quite splash</code> ( or it will 花屏)</li><li>f10 to reboot</li><li>begin install<ol><li>choose the last option for install</li><li>add ubuntu disk partitions on your blank partition<ol><li>&#x2F;, main partition</li><li>home, logistic partition</li><li>add efi on 200m partition</li><li>add swap if your ram is small</li></ol></li></ol></li><li>after installation reboot</li><li>in grub, edit again, use <code>e</code>, add <code>nomodeset</code> after <code>quite splash</code></li></ol><h2 id="install-cuda-and-graphic-card-driver"><a href="#install-cuda-and-graphic-card-driver" class="headerlink" title="install cuda and graphic card driver"></a>install cuda and graphic card driver</h2><p>tutorials on Chinese websites are not good enough. they always said you need to install the driver first, but actually the cuda will recommend you to install the driver while you are installing cuda</p><ol><li><p>copy the cuda.run from your external disk to your local disk</p></li><li><p>change directory to where your cuda is</p></li><li><p><code>sudo chmod x+a cuda.run</code></p></li><li><p><code>sudo ./cuda.run</code></p></li><li><p>after installation, edit environment variables</p></li></ol><p> <code>sudo gedit /etc/profile</code>, append contents like in the bottom</p><p>refer to <a href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions">https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions</a> for more</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/cuda-11.1/bin<span class="variable">$&#123;PATH:+:<span class="variable">$&#123;PATH&#125;</span>&#125;</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64\</span><br><span class="line">                         <span class="variable">$&#123;LD_LIBRARY_PATH:+:<span class="variable">$&#123;LD_LIBRARY_PATH&#125;</span>&#125;</span></span><br></pre></td></tr></table></figure><p><code>source /etc/profile</code> to make it activated</p><h3 id="check"><a href="#check" class="headerlink" title="check"></a>check</h3><ol><li><p>use <code>nvidia-smi</code> and <code>nvcc -V</code> to check whether it works.</p></li><li><p>now you would be able to reboot the system without the need to add <code>nomodeset</code></p></li><li><p>run cuda examples</p><ul><li><p><code>cd ~/nvidia_cuda-11.1-examples</code></p></li><li><p><code>make</code></p></li><li><p><code>devicequery</code>, it is under utilities&#x2F;devicequery</p></li></ul></li></ol><h2 id="install-docker"><a href="#install-docker" class="headerlink" title="install docker"></a>install docker</h2><p><a href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository \</span><br><span class="line">   <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">   <span class="subst">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">   stable&quot;</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><h3 id="check-1"><a href="#check-1" class="headerlink" title="check"></a>check</h3><p><code>sudo docker run hello-world</code></p><h3 id="add-permission"><a href="#add-permission" class="headerlink" title="add permission"></a>add permission</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo gpasswd -a current_user_name docker</span><br><span class="line">Sudo service docker restart</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure><h2 id="install-others-just-follow-the-document"><a href="#install-others-just-follow-the-document" class="headerlink" title="install others, just follow the document"></a>install others, just follow the document</h2><ul><li>ngc</li><li>nvidia docker</li></ul><h2 id="use-vm-to-boost-local-docker-pull"><a href="#use-vm-to-boost-local-docker-pull" class="headerlink" title="use vm to boost local docker pull"></a>use vm to boost local docker pull</h2><ol><li>cd to <code>vm_for_docker_pull</code> ( it is from my private repo)</li><li>in bash, <code>ssh -i nessvm-asia_key.pem ness@52.175.13.200</code></li><li>pull the containers from NGC </li><li><code>docker tag image_from_ngc registry.cn-hangzhou.aliyuncs.com/ness001/image_name</code></li><li>on your local computer, <code>docker pull registry.cn-hangzhou.aliyuncs.com/ness001/image_name</code></li></ol><h3 id="current-pushed-images"><a href="#current-pushed-images" class="headerlink" title="current pushed images"></a>current pushed images</h3><p><code>registry.cn-hangzhou.aliyuncs.com/ness001/</code> +<code>aliyun image name</code></p><table><thead><tr><th>original name</th><th>tag</th><th>aliyun image name</th><th>usage</th></tr></thead><tbody><tr><td>nvcr.io&#x2F;nvidia&#x2F;tlt-streamanalytics</td><td>v2.0_py3</td><td>nv-tlt</td><td>transfer learning toolkit</td></tr><tr><td>nvidia&#x2F;cuda</td><td>11.0-base</td><td>cuda11</td><td>test for nvidia-docker2</td></tr><tr><td></td><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td><td></td></tr></tbody></table>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> nvidia </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>prepare ml env</title>
+      <link href="/2020/10/02/prepare-env/"/>
+      <url>/2020/10/02/prepare-env/</url>
+      
+        <content type="html"><![CDATA[<p>I built my new pc last month and walked through the tedious installation process for future machine learning usage.</p><p>Here are some reusable snippets just in case I forgot.</p><h1 id="My-wares"><a href="#My-wares" class="headerlink" title="My wares"></a>My wares</h1><h2 id="hardware"><a href="#hardware" class="headerlink" title="hardware"></a>hardware</h2><ul><li>Intel 10900k</li><li>RTX 2070s Colorful Adoc</li><li>ASUS Z490 edge wifi version</li><li>3600mhz 32G RAM</li></ul><h2 id="software"><a href="#software" class="headerlink" title="software"></a>software</h2><ul><li>win10 professional version</li><li>efficiency tools<ul><li>listary</li><li>chrome<ul><li>toby</li></ul></li></ul></li></ul><h1 id="conda"><a href="#conda" class="headerlink" title="conda"></a>conda</h1><ul><li>download anaconda</li><li>invoke anaconda prompt</li><li>create env<ul><li><code>conda create --name wow</code></li><li><code>conda create --name wow python=3.7.3</code></li></ul></li><li>list env<ul><li><code>conda env list</code></li></ul></li><li>activate env<ul><li><code>conda activate wow</code></li></ul></li><li>list env packages<ul><li><code>conda list</code></li></ul></li><li>clone an env<ul><li><code>conda create --name copy --clone wow</code></li></ul></li><li>remove an env<ul><li><code>conda env remove --name copy</code></li></ul></li></ul><h2 id="add-conda-to-path"><a href="#add-conda-to-path" class="headerlink" title="add conda to path"></a>add conda to path</h2><ul><li>in cmd, <code>where conda</code></li><li>add three paths to <strong>system environment variable</strong> PATH<ul><li>1</li><li>2</li><li>3</li></ul></li></ul><h2 id="change-mirror"><a href="#change-mirror" class="headerlink" title="change mirror"></a>change mirror</h2><p>find <code>.condarc</code> file under your user folder, replace the content with</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">defaults</span></span><br><span class="line"><span class="attr">show_channel_urls:</span> <span class="literal">true</span></span><br><span class="line"><span class="attr">channel_alias:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda</span></span><br><span class="line"><span class="attr">default_channels:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/pro</span></span><br><span class="line">  <span class="bullet">-</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2</span></span><br><span class="line"><span class="attr">custom_channels:</span></span><br><span class="line">  <span class="attr">conda-forge:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">msys2:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">bioconda:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">menpo:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">pytorch:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br><span class="line">  <span class="attr">simpleitk:</span> <span class="string">https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud</span></span><br></pre></td></tr></table></figure><p>If you need to restore to the default settings, just delete all the lines after show_channel_urls line or you can use <code>conda config --remove-key channels</code></p><h1 id="pip"><a href="#pip" class="headerlink" title="pip"></a>pip</h1><ul><li><p><code>conda install pip</code></p></li><li><p>change mirror</p><ul><li>（1）阿里云 <a href="http://mirrors.aliyun.com/pypi/simple/">http://mirrors.aliyun.com/pypi/simple/</a><br>（2）豆瓣<a href="http://pypi.douban.com/simple/">http://pypi.douban.com/simple/</a><br>（3）清华大学 <a href="https://pypi.tuna.tsinghua.edu.cn/simple/">https://pypi.tuna.tsinghua.edu.cn/simple/</a><br>（4）中国科学技术大学 <a href="http://pypi.mirrors.ustc.edu.cn/simple/">http://pypi.mirrors.ustc.edu.cn/simple/</a><br>（5）华中科技大学<a href="http://pypi.hustunique.com/">http://pypi.hustunique.com/</a></li></ul><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pip install pip -U</span><br><span class="line">pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</span><br></pre></td></tr></table></figure></li><li><p>search for a package</p><ul><li><code>pip search keras</code></li></ul></li></ul><h1 id="prepare-ml-dl-env"><a href="#prepare-ml-dl-env" class="headerlink" title="prepare ml+dl env"></a>prepare ml+dl env</h1><h2 id="install-packages"><a href="#install-packages" class="headerlink" title="install packages"></a>install packages</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pandas scikit-learn seaborn tqdm</span><br><span class="line">pip install jupyter notebook</span><br><span class="line">pip install jupyter_contrib_nbextensions</span><br></pre></td></tr></table></figure><p>the latest tf2 supports both gpu and cpu.</p><p><a href="https://pytorch.org/">https://pytorch.org</a></p><p><a href="https://www.tensorflow.org/install">https://www.tensorflow.org/install</a></p><h2 id="install-cuda"><a href="#install-cuda" class="headerlink" title="install cuda"></a>install cuda</h2><p>You should check the pytorch page for cuda version or it can’t detect your gpu properly.</p><p>Till now, the latest cuda version you could use is CUDA10.02.</p><p>You can find all cuda versions here.</p><ul><li><a href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a></li></ul><p>The difference between CUDA and cuDNN:</p><ul><li><a href="https://blog.csdn.net/u014380165/article/details/77340765">https://blog.csdn.net/u014380165/article/details/77340765</a></li></ul><h2 id="which-cnDNN-should-you-install"><a href="#which-cnDNN-should-you-install" class="headerlink" title="which cnDNN should you install"></a>which cnDNN should you install</h2><p>just use <code>pip install cudnn</code> and it will automatically choose the right version of cudnn for your cuda version.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ml101 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>pandas strange row number mismatch</title>
+      <link href="/2020/05/30/pandas-strange-row-number-mismatch/"/>
+      <url>/2020/05/30/pandas-strange-row-number-mismatch/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h2><p>一个30兆不到的csv文件，70多万条数据。</p><p>使用read csv加low memory选项读入。</p><p>始终显示：</p><blockquote><p>class ‘pandas.core.frame.DataFrame’&gt;<br>Int64Index: 80350 entries, 0 to 722963<br>Data columns (total 5 columns):<br>user_id         80350 non-null float64<br>item_id_pred    80350 non-null float64<br>score           80350 non-null float64<br>rank            80350 non-null float64<br>item_id_true    80350 non-null float64<br>dtypes: float64(5)<br>memory usage: 3.7 MB</p></blockquote><p>debug途中有一瞬间存在过30m全部读入的情况，可是再难复现。</p><h2 id="可能的原因"><a href="#可能的原因" class="headerlink" title="可能的原因"></a>可能的原因</h2><ul><li><p>文件被其他程序使用着 - 排除，我没有打开</p></li><li><p>文件编码原因 - 未知</p></li><li><p>read_csv选项里还要加东西<code>quoting=csv.QUOTE_NONE, error_bad_lines=Fals</code> -实验后，无用</p></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>使用pyinstaller将pyqt5打包为MacOS App</title>
+      <link href="/2020/05/20/py-bundle/"/>
+      <url>/2020/05/20/py-bundle/</url>
+      
+        <content type="html"><![CDATA[<h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p><h2 id="TL-DR"><a href="#TL-DR" class="headerlink" title="TL;DR"></a>TL;DR</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> yourprogram</span><br><span class="line">sudo pyi-makespec --onefile --windowed yourscript.py</span><br><span class="line"><span class="comment">#如果你修改了py文件，也不用再运行一遍👆的代码</span></span><br><span class="line">sudo pyinstaller --clean --noconfirm yourscript.spec</span><br></pre></td></tr></table></figure><p>出现no permission问题，用sudo就对了。</p><p>我的环境：</p><blockquote><p>163 INFO: PyInstaller: 3.6<br>164 INFO: Python: 3.7.4<br>187 INFO: Platform: Darwin-19.2.0-x86_64-i386-64bit<br>219 INFO: UPX is available.</p></blockquote><h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>基本格式：</p><p><code>pyinstaller</code> options.. <code>myscript.py</code></p><p><code>pyinstaller --windowed --onefile --clean --noconfirm testqt.py</code></p><p>这样生成的文件夹dist中是pkg文件，往往打开就出错，不知为何</p><p>通过上面的代码，根目录下还会生成一个spec文件，spec文件是告诉pyinstaller如何打包你的程序的配置文件，对spec文件做相同的操作，就可以获得app文件。</p><p><code>pyinstaller</code> options.. <code>myscript.spec</code></p><p><code>pyinstaller --clean --noconfirm testqt.spec</code></p><p>怎么直接获得spec文件呢？</p><p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code></p><p>spec文件打开后应该能看到类似这样的字样</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">app = BUNDLE(exe,</span><br><span class="line">         name=&#x27;myscript.app&#x27;,</span><br><span class="line">         icon=None,</span><br><span class="line">         bundle_identifier=None)</span><br></pre></td></tr></table></figure><h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><p>注意短横-后是缩写，–后是全称。</p><p><a href="https://pyinstaller.readthedocs.io/en/stable/usage.html">https://pyinstaller.readthedocs.io/en/stable/usage.html</a></p><h3 id="对py的pyinstaller-和pyi-makespec命令（只列出常用）"><a href="#对py的pyinstaller-和pyi-makespec命令（只列出常用）" class="headerlink" title="对py的pyinstaller 和pyi-makespec命令（只列出常用）"></a>对py的pyinstaller 和pyi-makespec命令（只列出常用）</h3><ul><li>–clean<ul><li>Clean PyInstaller cache and remove temporary files before building.</li></ul></li><li>–noconfirm -y<ul><li>Replace output directory (default: SPECPATH&#x2F;dist&#x2F;SPECNAME) without asking for confirmation</li></ul></li><li>–windowed -w<ul><li>Windows and Mac OS X: do not provide a console window for standard i&#x2F;o. On Mac OS X this also triggers building an OS X .app bundle. On Windows this option will be set if the first script is a ‘.pyw’ file. This option is ignored in *NIX systems.</li></ul></li><li>–onefile -F<ul><li>Create a one-file bundled executable.</li></ul></li><li>onedir -D<ul><li>Create a one-folder bundle containing an executable (default)</li></ul></li><li>–osx-bundle-identifier BUNDLE_IDENTIFIER<ul><li>Mac OS X .app bundle identifier is used as the default unique program name for code signing purposes. The usual form is a hierarchical name in reverse DNS notation. For example: com.mycompany.department.appname (default: first script’s basename)</li></ul></li></ul><hr><p>官方说对于对py的pyinstaller选项库和pyi-makespec的选项库是一样的。</p><blockquote><p>You create a spec file using this command:</p><blockquote><p><code>pyi-makespec</code> <em>options</em> <code>*name*.py</code> [<em>other scripts</em> …]</p></blockquote><p>The <em>options</em> are the same options documented above for the <code>pyinstaller</code> command. This command creates the <code>*name*.spec</code> file but does not go on to build the executable.</p></blockquote><p>然而其实不是的，如果你加入 –clean的选项，则会出现<code>pyi-makespec: error: unrecognized arguments: --clean</code>，经过测试–noconfirm也是不能用的。</p><h3 id="对spec的pyinstaller"><a href="#对spec的pyinstaller" class="headerlink" title="对spec的pyinstaller"></a>对spec的pyinstaller</h3><p>对于spec文件操作，只有这些命令是起作用的。</p><ul><li><code>--upx-dir=</code></li><li><code>--distpath=</code></li><li><code>--workpath=</code></li><li><code>--noconfirm</code></li><li><code>--ascii</code></li><li><code>--clean</code></li></ul><h2 id="高分辨率app"><a href="#高分辨率app" class="headerlink" title="高分辨率app"></a>高分辨率app</h2><p>当你好不容易打包好一个app后问题又来了，你发现你的app的ui异常模糊，分辨率很低。你只需要在spec文件中加上info_plist就能解决问题。</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">app = BUNDLE(exe,</span><br><span class="line">     name=&#x27;myscript.app&#x27;,</span><br><span class="line">     icon=None,</span><br><span class="line">     bundle_identifier=None</span><br><span class="line">     info_plist=&#123;</span><br><span class="line">        &#x27;NSHighResolutionCapable&#x27;: &#x27;True&#x27;  #&lt;------这一句</span><br><span class="line">        &#125;,</span><br><span class="line">     )</span><br></pre></td></tr></table></figure><h2 id="减小app体积"><a href="#减小app体积" class="headerlink" title="减小app体积"></a>减小app体积</h2><p>写python程序的过程中尽量不要使用import，而是用from…import…来减少调用。</p><p>第一步：安装upx</p><ul><li>使用<code>brew install upx</code></li></ul><p>第二部：使用pipenv的干净环境进行打包操作。</p><ul><li>以下是一个本人的通用流程。依次在bash中运行。</li></ul><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">pip install pipenv</span><br><span class="line">pip install pipreqs</span><br><span class="line">pipreqs <span class="comment">#generate clean requirements.txt</span></span><br><span class="line">pipenv install</span><br><span class="line">pipenv shell</span><br><span class="line">pip install -r requirements.txt</span><br><span class="line">pyi-makespec --onefile --windowed myscript.py</span><br><span class="line">pyinstaller --noconfirm --clean myscript.spec</span><br></pre></td></tr></table></figure><h2 id="不知道问题出在哪里怎么办？"><a href="#不知道问题出在哪里怎么办？" class="headerlink" title="不知道问题出在哪里怎么办？"></a>不知道问题出在哪里怎么办？</h2><p>运行dist文件夹下的同名unix进程，该进程会在terminal中打开，如果有错误会在terminal中表现出来。</p><p>比如我的app一开始只要双击就会闪退，于是我使用这个方法，控制台中出现了如下错误。经过搜索了解到是setuptools最新的几个版本和pyqt5有点冲突。使用<code>pip install setuptools==44.0.0</code>安装44版本后就没问题了。</p><blockquote><p>File “site-packages&#x2F;pkg_resources&#x2F;<strong>init</strong>.py”, line 86, in <module></p><p>ModuleNotFoundError: No module named ‘pkg_resources.py2_warn’</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>remove an executable file to \usr\bin</title>
+      <link href="/2020/03/30/macos-user-bin/"/>
+      <url>/2020/03/30/macos-user-bin/</url>
+      
+        <content type="html"><![CDATA[<p>It very silly setting of the MacOs<br>When you want to remove an executable file to \usr\bin, you will find it impossible, because It is protect by SIP (System integrity Protection). If you want to disable it, you have to go to the safety mode, which is restarting your mac with CMD+R holding. Then, in the safety tool -terminal, you can run a command to disable it.</p><p><strong>Actually, you don’t need to do all these. You can just paste your exe file into …\usr\local\bin.</strong> It is equally effective as you put it in …\usr\bin.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MacOS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>switch提升网速的dns测试</title>
+      <link href="/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/"/>
+      <url>/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/</url>
+      
+        <content type="html"><![CDATA[<h2 id="测试背景"><a href="#测试背景" class="headerlink" title="测试背景"></a>测试背景</h2><p>电信光纤200m，上海</p><p>腾达千兆5g路由器</p><h2 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果"></a>测试结果</h2><p>香港：</p><p>218.102.23.228</p><p>203.80.96.10</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> switch </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>label encoder和ordinal encoder的区别</title>
+      <link href="/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+      <url>/2019/12/15/label-encoder%E5%92%8Cordinal-encoder%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<p>中文圈的资料大多都是错的或者语焉不详。在此阐述清楚，为后来人开路。</p><h2 id="一句话"><a href="#一句话" class="headerlink" title="一句话"></a>一句话</h2><p>两者功能一样。但label适用于目标变量，而ordinal适用于多个特征变量。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>查询sklearn官方文档，可以看到label encoder的fit方法，输入的数据是 <strong>y array-like of shape (n_samples,)</strong></p><p>，而ordinal encoder输入的数据是<strong>X array-like, shape [n_samples, n_features</strong>。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> sklearn </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>generate requirement.txt for your python project生成</title>
+      <link href="/2019/12/13/generate-requirement/"/>
+      <url>/2019/12/13/generate-requirement/</url>
+      
+        <content type="html"><![CDATA[<h2 id="generate-requirement-txt"><a href="#generate-requirement-txt" class="headerlink" title="generate requirement.txt"></a>generate requirement.txt</h2><ul><li>for all packages in the env <code>pip3 freeze &gt; requirements.txt</code></li><li>for packages used in you project<ul><li><code>pip3 install pipreqs</code></li><li><code>pipreqs </code></li></ul></li></ul><h2 id="install"><a href="#install" class="headerlink" title="install"></a>install</h2><p><code>pip3 install -r requirements.txt</code></p><h2 id="What’s-the-difference-between-pip-and-pip3"><a href="#What’s-the-difference-between-pip-and-pip3" class="headerlink" title="What’s the difference between pip and pip3?"></a>What’s the <strong>difference between pip and pip3</strong>?</h2><blockquote><p>What’s the <strong>difference between pip and pip3</strong>? <strong>Pip</strong> is for python version less than 3. and <strong>pip3</strong> is used when you want to install packages for python version 3 or higher.</p></blockquote><p>The text about is right in most of cases. The packages’ installation location is different for pip and pip3. But sometimes, the pip command in bash is a soft-link to pip3, if you want to check whether your env is this case, just use <code>which pip</code> and <code>which pip3</code> command to see the unix executable.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>腾讯云ubuntu启用root账户</title>
+      <link href="/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/"/>
+      <url>/2019/12/13/%E8%85%BE%E8%AE%AF%E4%BA%91ubuntu%E5%90%AF%E7%94%A8root%E8%B4%A6%E6%88%B7/</url>
+      
+        <content type="html"><![CDATA[<h1 id="腾讯云ubuntu启用root账户"><a href="#腾讯云ubuntu启用root账户" class="headerlink" title="腾讯云ubuntu启用root账户"></a>腾讯云ubuntu启用root账户</h1><p>腾讯云ubuntu的默认账户名为ubuntu</p><p>启用root步骤</p><ul><li><p>sudo passwd root</p></li><li><p>sudo vi &#x2F;etc&#x2F;ssh&#x2F;sshd_config</p><ul><li><p>esc，在命令行模式下，输入 &#x2F;PermitRootLogin，搜索定位到这一行，使用n可以切换到下一个</p></li><li><p>i，删除#，修改后面的 prohibit-password 为 yes</p></li><li><blockquote><h4 id="PermitRootLogin-参数"><a href="#PermitRootLogin-参数" class="headerlink" title="PermitRootLogin 参数"></a>PermitRootLogin 参数</h4><p>指定 root 是否可以用 <a href="http://man.openbsd.org/ssh.1">ssh</a> 登录。参数值必须是“yes”、“prohibit-password”、“without-password”、“orced-commands-only”或者“no”。默认值是“prohibit-password”。</p><p>如果这个选项设置为“prohibit-password”、“without-password”，通过密码和键盘交互的授权方式对 root 用户禁用。</p><p>如果这个选项设置为“orced-commands-only”，root 用户只允许通过公钥授权登录，但只是指定了 <em>conmmand</em>选项的时候（这可能对远程备份是有好处的，即使 root 不允许登录）。其他授权方式对 root 无效。</p><p>如果这个选项设置为“no”，root 不允许登录。</p></blockquote></li></ul></li><li><p>sudo service ssh restart （！！！）</p></li><li><p>切换到root </p><ul><li>su root</li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Apple Lines 苹果广告词摘录</title>
+      <link href="/2019/12/07/apple-ad-lines/"/>
+      <url>/2019/12/07/apple-ad-lines/</url>
+      
+        <content type="html"><![CDATA[<p>愿苹果永不落幕。</p><p>Long Live with Apple.</p><h2 id="Special-Day"><a href="#Special-Day" class="headerlink" title="Special Day"></a>Special Day</h2><p>gift</p><blockquote><p>Make someone’s holiday.</p></blockquote><p>Best of 2019</p><blockquote><p>你的心头所爱，我们甄选推荐。</p><p>Loved by you. Awarded bu us.</p></blockquote><h2 id="Product"><a href="#Product" class="headerlink" title="Product"></a>Product</h2><h3 id="Apple-Watch"><a href="#Apple-Watch" class="headerlink" title="Apple Watch"></a>Apple Watch</h3><p>watch series5</p><blockquote><p>全天候视网膜显示屏，全新登场。</p><p>这块表，好不一样。</p></blockquote><h3 id="AirPods"><a href="#AirPods" class="headerlink" title="AirPods"></a>AirPods</h3><p>AirPods Pro</p><blockquote><p>妙得不同凡响。</p><p>Magic like you’ve never heard.</p></blockquote><h3 id="iPhone"><a href="#iPhone" class="headerlink" title="iPhone"></a>iPhone</h3><p>iPhone 11 Pro</p><blockquote><p>Pro cameras. Pro display. Pro performance.</p></blockquote><p>iPhone 11</p><blockquote><p>Just the right amount of everything.</p></blockquote><p>iPhone SE 2</p><blockquote><p>Lots to Love, Less to Spend（我觉得用have会更好）</p><p>称心称手，超值入手。</p><hr><p>iPhone SE packs our most powerful chip into our most popular size at our most affordable price. It’s just what you’ve been waiting for.</p><p>Survives splashes,<br>sloshes, sprinkles, sprays,<br>splatters, and spills.</p><p>Built for iOS 13. And beyond.</p></blockquote><h3 id="-tv"><a href="#-tv" class="headerlink" title=" tv+"></a> tv+</h3><blockquote><p>Bring the big screen to your screen.</p></blockquote><h2 id="Software"><a href="#Software" class="headerlink" title="Software"></a>Software</h2><p>macOS Catalina</p><blockquote><p>Mac的本领，突飞猛进。</p></blockquote>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> apple </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
 </search>

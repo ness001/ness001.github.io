@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="en">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="nvidia," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Ness001" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="tested for two times. prepare download os from aliyun: http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu-releases&#x2F;2 choose amd64 desktop version   download qv2ray and v2ray core from github download ultraiso download">
+<meta property="og:type" content="article">
+<meta property="og:title" content="nvidia-ubuntu-env">
+<meta property="og:url" content="http://yoursite.com/2020/11/01/nvidia-ubuntu-env/index.html">
+<meta property="og:site_name" content="Ness001">
+<meta property="og:description" content="tested for two times. prepare download os from aliyun: http:&#x2F;&#x2F;mirrors.aliyun.com&#x2F;ubuntu-releases&#x2F;2 choose amd64 desktop version   download qv2ray and v2ray core from github download ultraiso download">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-11-01T05:36:46.000Z">
+<meta property="article:modified_time" content="2020-11-01T05:36:46.000Z">
+<meta property="article:author" content="Liang Li">
+<meta property="article:tag" content="nvidia">
+<meta name="twitter:card" content="summary">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2020/11/01/nvidia-ubuntu-env/"/>
+
+
+
+
+
+  <title>nvidia-ubuntu-env | Ness001</title>
+  
+
+
+
+
+
+
+
+
+<meta name="generator" content="Hexo 5.4.2"></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Ness001</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">永不放弃的信念和孤注一掷的勇气</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/01/nvidia-ubuntu-env/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ness001">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">nvidia-ubuntu-env</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-11-01T13:36:46+08:00">
+                2020-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>tested for two times.</p>
+<h2 id="prepare"><a href="#prepare" class="headerlink" title="prepare"></a>prepare</h2><ul>
+<li>download os from aliyun: <a target="_blank" rel="noopener" href="http://mirrors.aliyun.com/ubuntu-releases/2">http://mirrors.aliyun.com/ubuntu-releases/2</a><ul>
+<li>choose amd64 desktop version</li>
+</ul>
+</li>
+<li>download qv2ray and v2ray core from github</li>
+<li>download ultraiso</li>
+<li>download cuda.run for your ubuntu version<ul>
+<li><a target="_blank" rel="noopener" href="https://developer.nvidia.com/cuda-toolkit-archive">https://developer.nvidia.com/cuda-toolkit-archive</a></li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p>use a portable disk to save all the files in case next time you need them</p>
+</blockquote>
+<h2 id="install-ubuntu"><a href="#install-ubuntu" class="headerlink" title="install ubuntu"></a>install ubuntu</h2><ol>
+<li>prepare a blank usb flash disk</li>
+<li>open the os iso in ultraios, and write it to your usb flash disk</li>
+<li>compress a blank partition in other disks, compress a 200m partition in your windows-disk</li>
+<li>reboot, in bois, select the usb flash disk, reboot</li>
+<li>edit install config(press <code>e</code>), add <code>nomodeset</code> after <code>quite splash</code> ( or it will 花屏)</li>
+<li>f10 to reboot</li>
+<li>begin install<ol>
+<li>choose the last option for install</li>
+<li>add ubuntu disk partitions on your blank partition<ol>
+<li>&#x2F;, main partition</li>
+<li>home, logistic partition</li>
+<li>add efi on 200m partition</li>
+<li>add swap if your ram is small</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>after installation reboot</li>
+<li>in grub, edit again, use <code>e</code>, add <code>nomodeset</code> after <code>quite splash</code></li>
+</ol>
+<h2 id="install-cuda-and-graphic-card-driver"><a href="#install-cuda-and-graphic-card-driver" class="headerlink" title="install cuda and graphic card driver"></a>install cuda and graphic card driver</h2><p>tutorials on Chinese websites are not good enough. they always said you need to install the driver first, but actually the cuda will recommend you to install the driver while you are installing cuda</p>
+<ol>
+<li><p>copy the cuda.run from your external disk to your local disk</p>
+</li>
+<li><p>change directory to where your cuda is</p>
+</li>
+<li><p><code>sudo chmod x+a cuda.run</code></p>
+</li>
+<li><p><code>sudo ./cuda.run</code></p>
+</li>
+<li><p>after installation, edit environment variables</p>
+</li>
+</ol>
+<p> <code>sudo gedit /etc/profile</code>, append contents like in the bottom</p>
+<p>refer to <a target="_blank" rel="noopener" href="https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions">https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#post-installation-actions</a> for more</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> PATH=/usr/local/cuda-11.1/bin<span class="variable">$&#123;PATH:+:<span class="variable">$&#123;PATH&#125;</span>&#125;</span></span><br><span class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64\</span><br><span class="line">                         <span class="variable">$&#123;LD_LIBRARY_PATH:+:<span class="variable">$&#123;LD_LIBRARY_PATH&#125;</span>&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>source /etc/profile</code> to make it activated</p>
+<h3 id="check"><a href="#check" class="headerlink" title="check"></a>check</h3><ol>
+<li><p>use <code>nvidia-smi</code> and <code>nvcc -V</code> to check whether it works.</p>
+</li>
+<li><p>now you would be able to reboot the system without the need to add <code>nomodeset</code></p>
+</li>
+<li><p>run cuda examples</p>
+<ul>
+<li><p><code>cd ~/nvidia_cuda-11.1-examples</code></p>
+</li>
+<li><p><code>make</code></p>
+</li>
+<li><p><code>devicequery</code>, it is under utilities&#x2F;devicequery</p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="install-docker"><a href="#install-docker" class="headerlink" title="install docker"></a>install docker</h2><p><a target="_blank" rel="noopener" href="https://docs.docker.com/engine/install/ubuntu/">https://docs.docker.com/engine/install/ubuntu/</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install \</span><br><span class="line">    apt-transport-https \</span><br><span class="line">    ca-certificates \</span><br><span class="line">    curl \</span><br><span class="line">    gnupg-agent \</span><br><span class="line">    software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository \</span><br><span class="line">   <span class="string">&quot;deb [arch=amd64] https://download.docker.com/linux/ubuntu \</span></span><br><span class="line"><span class="string">   <span class="subst">$(lsb_release -cs)</span> \</span></span><br><span class="line"><span class="string">   stable&quot;</span></span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<h3 id="check-1"><a href="#check-1" class="headerlink" title="check"></a>check</h3><p><code>sudo docker run hello-world</code></p>
+<h3 id="add-permission"><a href="#add-permission" class="headerlink" title="add permission"></a>add permission</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo gpasswd -a current_user_name docker</span><br><span class="line">Sudo service docker restart</span><br><span class="line">reboot</span><br></pre></td></tr></table></figure>
+
+<h2 id="install-others-just-follow-the-document"><a href="#install-others-just-follow-the-document" class="headerlink" title="install others, just follow the document"></a>install others, just follow the document</h2><ul>
+<li>ngc</li>
+<li>nvidia docker</li>
+</ul>
+<h2 id="use-vm-to-boost-local-docker-pull"><a href="#use-vm-to-boost-local-docker-pull" class="headerlink" title="use vm to boost local docker pull"></a>use vm to boost local docker pull</h2><ol>
+<li>cd to <code>vm_for_docker_pull</code> ( it is from my private repo)</li>
+<li>in bash, <code>ssh -i nessvm-asia_key.pem ness@52.175.13.200</code></li>
+<li>pull the containers from NGC </li>
+<li><code>docker tag image_from_ngc registry.cn-hangzhou.aliyuncs.com/ness001/image_name</code></li>
+<li>on your local computer, <code>docker pull registry.cn-hangzhou.aliyuncs.com/ness001/image_name</code></li>
+</ol>
+<h3 id="current-pushed-images"><a href="#current-pushed-images" class="headerlink" title="current pushed images"></a>current pushed images</h3><p><code>registry.cn-hangzhou.aliyuncs.com/ness001/</code> +<code>aliyun image name</code></p>
+<table>
+<thead>
+<tr>
+<th>original name</th>
+<th>tag</th>
+<th>aliyun image name</th>
+<th>usage</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>nvcr.io&#x2F;nvidia&#x2F;tlt-streamanalytics</td>
+<td>v2.0_py3</td>
+<td>nv-tlt</td>
+<td>transfer learning toolkit</td>
+</tr>
+<tr>
+<td>nvidia&#x2F;cuda</td>
+<td>11.0-base</td>
+<td>cuda11</td>
+<td>test for nvidia-docker2</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/nvidia/" rel="tag"># nvidia</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/10/02/prepare-env/" rel="next" title="prepare ml env">
+                <i class="fa fa-chevron-left"></i> prepare ml env
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2021/08/09/copy%20current%20code%20line%20shortcut%20in%20Xcode/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name"></p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+<script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+<div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div id="myCanvasContainer" class="widget tagcloud">
+        <canvas width="250" height="250" id="resCanvas" style="width:100%">
+            <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MacOS/" rel="tag">MacOS</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/apple/" rel="tag">apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/cs61c-tools/" rel="tag">cs61c tools</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ml101/" rel="tag">ml101</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nvidia/" rel="tag">nvidia</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sklearn/" rel="tag">sklearn</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/switch/" rel="tag">switch</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/ubuntu/" rel="tag">ubuntu</a><span class="tag-list-count">1</span></li></ul>
+        </canvas>
+    </div>
+</div>
+
+
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#prepare"><span class="nav-number">1.</span> <span class="nav-text">prepare</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-ubuntu"><span class="nav-number">2.</span> <span class="nav-text">install ubuntu</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-cuda-and-graphic-card-driver"><span class="nav-number">3.</span> <span class="nav-text">install cuda and graphic card driver</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#check"><span class="nav-number">3.1.</span> <span class="nav-text">check</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-docker"><span class="nav-number">4.</span> <span class="nav-text">install docker</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#check-1"><span class="nav-number">4.1.</span> <span class="nav-text">check</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#add-permission"><span class="nav-number">4.2.</span> <span class="nav-text">add permission</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#install-others-just-follow-the-document"><span class="nav-number">5.</span> <span class="nav-text">install others, just follow the document</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#use-vm-to-boost-local-docker-pull"><span class="nav-number">6.</span> <span class="nav-text">use vm to boost local docker pull</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#current-pushed-images"><span class="nav-number">6.1.</span> <span class="nav-text">current pushed images</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Liang Li</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+<div class="bg_content">
+  <canvas id="canvas"></canvas>
+</div>
+</body>
+</html>
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+<script type="text/javascript" src="/js/dynamic_bg.js"></script>
