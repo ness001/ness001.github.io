@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="cs61c tools," />
 
 
 
@@ -81,13 +81,21 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ness001">
-<meta property="og:url" content="http://yoursite.com/archives/2020/index.html">
+<meta name="description" content="This article introduces the common commands and shortcuts using GDB.Suppose we have a program named hello.c and complied using gcc -g -o hello hello.c. commandsBegin gdb session: gdb hello Set breakpo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="GDB debugging introduction">
+<meta property="og:url" content="http://yoursite.com/2022/05/08/gdb-usage-intro/index.html">
 <meta property="og:site_name" content="Ness001">
+<meta property="og:description" content="This article introduces the common commands and shortcuts using GDB.Suppose we have a program named hello.c and complied using gcc -g -o hello hello.c. commandsBegin gdb session: gdb hello Set breakpo">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/assets/gdb-source-code.png">
+<meta property="og:image" content="http://yoursite.com/assets/gdb-reg.png">
+<meta property="article:published_time" content="2022-05-08T10:12:34.000Z">
+<meta property="article:modified_time" content="2022-05-08T10:12:34.000Z">
 <meta property="article:author" content="Liang Li">
+<meta property="article:tag" content="cs61c tools">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/assets/gdb-source-code.png">
 
 
 
@@ -117,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2020/"/>
+  <link rel="canonical" href="http://yoursite.com/2022/05/08/gdb-usage-intro/"/>
 
 
 
 
 
-  <title>Archive | Ness001</title>
+  <title>GDB debugging introduction | Ness001</title>
   
 
 
@@ -144,7 +152,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -238,259 +246,165 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2022/05/08/gdb-usage-intro/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ness001">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">GDB debugging introduction</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2022-05-08T18:12:34+08:00">
+                2022-05-08
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 13 posts in total. Keep on posting.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2020">2020</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/11/01/nvidia-ubuntu-env/" itemprop="url">
-              
-                <span itemprop="name">nvidia-ubuntu-env</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-11-01T13:36:46+08:00"
-              content="2020-11-01" >
-          11-01
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/10/02/prepare-env/" itemprop="url">
-              
-                <span itemprop="name">prepare ml env</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-10-02T12:37:02+08:00"
-              content="2020-10-02" >
-          10-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/30/pandas-strange-row-number-mismatch/" itemprop="url">
-              
-                <span itemprop="name">pandas strange row number mismatch</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-30T17:01:00+08:00"
-              content="2020-05-30" >
-          05-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+      
+        <p>This article introduces the common commands and shortcuts using GDB.<br>Suppose we have a program named <code>hello.c</code> and complied using <code>gcc -g -o hello hello.c</code>.</p>
+<h1 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h1><p>Begin gdb session: <code>gdb hello</code></p>
+<p>Set breakpoint: <code>break #lineNumber</code>, eg <code>break 10</code></p>
+<blockquote>
+<p>Hint: Find line number by using <code>vim hello.c</code>, press escape and input <code>:set nu</code></p>
+</blockquote>
+<p>Run: <code>run</code>, run with stdin: <code>run &lt; inputfile.txt</code></p>
+<p>Start debugging: <code>start</code></p>
+<p>Show local variables: <code>info locals</code></p>
+<p>Watch a local variable: <code>watch variableName</code></p>
+<p>Continue debugging: <code>continue</code></p>
+<p>Step in: <code>step</code>, executed the next line without stepping in: <code>next</code></p>
+<p>Display a variable at each step: <code>display variableName</code></p>
+<h1 id="shortcuts"><a href="#shortcuts" class="headerlink" title="shortcuts"></a>shortcuts</h1><p>In gdb session, press <code>ctrl+x</code> and then press <code>a</code> to show the source code. Press <code>ctrl+x</code> and then press <code>2</code> to show the corresponding assembly code.</p>
+<p><img src="/./assets/gdb-source-code.png" alt="gdb source code"></p>
+<blockquote>
+<p>You could also install cgdb to have better experiences. Use <code>cgdb hello</code> and press <code>escape</code> to scroll the source code and press <code>i</code> to exe command</p>
+</blockquote>
+<p>Press <code>ctrl+x</code> and then press <code>2</code> one more time to show the CPU register group.<br><img src="/./assets/gdb-reg.png" alt="gdb cpu registry"><br>Use <code>info all-registers</code> to show all registers.<br>Use <code>tui reg float</code> to show float registry group.</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/05/20/py-bundle/" itemprop="url">
-              
-                <span itemprop="name">使用pyinstaller将pyqt5打包为MacOS App</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-05-20T11:58:03+08:00"
-              content="2020-05-20" >
-          05-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/03/30/macos-user-bin/" itemprop="url">
-              
-                <span itemprop="name">remove an executable file to \usr\bin</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-03-30T11:58:03+08:00"
-              content="2020-03-30" >
-          03-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2020/02/18/switch%E6%8F%90%E5%8D%87%E7%BD%91%E9%80%9F%E7%9A%84dns%E5%AE%9E%E9%AA%8C/" itemprop="url">
-              
-                <span itemprop="name">switch提升网速的dns测试</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2020-02-18T14:20:53+08:00"
-              content="2020-02-18" >
-          02-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cs61c-tools/" rel="tag"># cs61c tools</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2021/08/09/Hexo%20NexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E7%82%B9%E5%87%BB%E7%88%B1%E5%BF%83%E6%95%88%E6%9E%9C/" rel="next" title="">
+                <i class="fa fa-chevron-left"></i> 
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -498,6 +412,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -518,8 +436,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -590,6 +517,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#commands"><span class="nav-number">1.</span> <span class="nav-text">commands</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#shortcuts"><span class="nav-number">2.</span> <span class="nav-text">shortcuts</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -731,6 +674,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 

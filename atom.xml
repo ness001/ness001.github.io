@@ -6,7 +6,7 @@
   <link href="http://yoursite.com/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2021-08-09T12:59:18.984Z</updated>
+  <updated>2022-05-08T10:12:34.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>GDB debugging introduction</title>
+    <link href="http://yoursite.com/2022/05/08/gdb-usage-intro/"/>
+    <id>http://yoursite.com/2022/05/08/gdb-usage-intro/</id>
+    <published>2022-05-08T10:12:34.000Z</published>
+    <updated>2022-05-08T10:12:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This article introduces the common commands and shortcuts using GDB.<br>Suppose we have a program named <code>hello.c</code> and complied using <code>gcc -g -o hello hello.c</code>.</p><h1 id="commands"><a href="#commands" class="headerlink" title="commands"></a>commands</h1><p>Begin gdb session: <code>gdb hello</code></p><p>Set breakpoint: <code>break #lineNumber</code>, eg <code>break 10</code></p><blockquote><p>Hint: Find line number by using <code>vim hello.c</code>, press escape and input <code>:set nu</code></p></blockquote><p>Run: <code>run</code>, run with stdin: <code>run &lt; inputfile.txt</code></p><p>Start debugging: <code>start</code></p><p>Show local variables: <code>info locals</code></p><p>Watch a local variable: <code>watch variableName</code></p><p>Continue debugging: <code>continue</code></p><p>Step in: <code>step</code>, executed the next line without stepping in: <code>next</code></p><p>Display a variable at each step: <code>display variableName</code></p><h1 id="shortcuts"><a href="#shortcuts" class="headerlink" title="shortcuts"></a>shortcuts</h1><p>In gdb session, press <code>ctrl+x</code> and then press <code>a</code> to show the source code. Press <code>ctrl+x</code> and then press <code>2</code> to show the corresponding assembly code.</p><p><img src="/./assets/gdb-source-code.png" alt="gdb source code"></p><blockquote><p>You could also install cgdb to have better experiences. Use <code>cgdb hello</code> and press <code>escape</code> to scroll the source code and press <code>i</code> to exe command</p></blockquote><p>Press <code>ctrl+x</code> and then press <code>2</code> one more time to show the CPU register group.<br><img src="/./assets/gdb-reg.png" alt="gdb cpu registry"><br>Use <code>info all-registers</code> to show all registers.<br>Use <code>tui reg float</code> to show float registry group.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;This article introduces the common commands and shortcuts using GDB.&lt;br&gt;Suppose we have a program named &lt;code&gt;hello.c&lt;/code&gt; and complied</summary>
+      
+    
+    
+    
+    
+    <category term="cs61c tools" scheme="http://yoursite.com/tags/cs61c-tools/"/>
+    
+  </entry>
   
   <entry>
     <title></title>
